@@ -13,8 +13,25 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @if (session('updated'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('updated') }}
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $error }}
+                            </div>
+                        @endforeach
+                    @endif
 
-                    {{ __('You are logged in!') }}
+                    <form action="{{ route('upload.profile-image') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <label for="profile-picture">Profilbild:</label>
+                        <input type="file" name="image" id="profile-picture">
+                        <input type="submit" value="Upload">
+                    </form>
                 </div>
             </div>
         </div>

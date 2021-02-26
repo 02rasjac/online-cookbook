@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
@@ -32,6 +33,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'profile_pic',
+        'recipies_is_public',
+        'first_name',
+        'last_name',
     ];
 
     /**
@@ -52,4 +57,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function uploadProfileImage($img) {
+        // Prepend username to easier know whose profileimage that is
+        $filename = auth()->user()->name . '-profile-image.' . $img->getClientOriginalExtension();
+
+        // Delete old profileimage to save storagespace
+        if (auth()->user()->profile_pic !== 'default_profile_pic.jpeg') {
+            (new self())->deleteOldProfileImage($img);
+        }
+
+        $img->storeAs('images/profile-images', $filename, 'public');
+        auth()->user()->update(['profile_pic' => $filename]);
+    }
+
+    protected function deleteOldProfileImage($img) {
+        Storage::delete('/public/images/profile-images/'.$img);
+    }
 }

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
+
+Route::name('upload.')->prefix('/upload')->group(function() {
+    Route::post('/profile-pic', [Controllers\UserController::class, 'uploadProfileImage'])->name('profile-image');
+});
