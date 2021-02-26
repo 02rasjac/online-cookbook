@@ -1,0 +1,57 @@
+Recipie:
+    Recipie_id (PK)
+    User (FK)
+    Status (Published, draft, deleted)
+    Thumbnail
+    Title
+    Description
+    Time to cook (in minutes)
+    Num of ingrediens
+    Difficulty (easy, medium, hard, 
+        maybe calculate based on time, num of ingrediens, num of instruction etc if not userdefined)
+    Rating
+    Num of portions original recipe is made for
+
+    Users should be able to link, but nothing else.
+
+Instruction:
+    Instruction_id (PK)
+    Recipie_id (FK)
+    Description
+    Timer (Nullable, in minutes)
+
+Recipie_ingredients:
+    Recipie_id (FK)
+    Group_id (FK)
+    Ingredient_name (FK)
+    Measurement_name (FK)
+    quantity
+
+Ingredient_Group:
+    Group_id (PK)
+    Title
+
+Ingredient:
+    Name (PK)
+    Verified (default false, user can add their own, but for others to be able to choose it has to be verified)
+    
+Measurement_unit:
+    Name (PK, i.e gram, dl etc)
+
+Recipie_Tags:
+    Recipie_id
+    Tag_name
+
+Tags:
+    Tag_name (PK)
+    Color (hexadecimal)
+
+User:
+    User_id (PK)
+    Username
+    Email
+    Email_Verified_at
+    Password
+    Role (user, verified_email, staff, admin)
+    Profile_Pic
+    Public_recipies (true/false)
