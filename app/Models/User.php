@@ -60,18 +60,19 @@ class User extends Authenticatable
 
     public static function uploadProfileImage($img) {
         // Prepend username to easier know whose profileimage that is
-        $filename = auth()->user()->name . '-profile-image.' . $img->getClientOriginalExtension();
+        $path = 'images/profile-images/' . auth()->user()->name . '-profile-image.' . $img->getClientOriginalExtension();
 
         // Delete old profileimage to save storagespace
         if (auth()->user()->profile_pic !== 'default_profile_pic.jpeg') {
-            (new self())->deleteOldProfileImage($img);
+            (new self())->deleteOldProfileImage(auth()->user()->profile_pic);
         }
 
-        $img->storeAs('images/profile-images', $filename, 'public');
-        auth()->user()->update(['profile_pic' => $filename]);
+        Storage::put($path, file_get_contents($img));
+        // $photo_path = $img->storePublicly($path);
+        auth()->user()->update(['profile_pic' => $path]);
     }
 
-    protected function deleteOldProfileImage($img) {
-        Storage::delete('/public/images/profile-images/'.$img);
+    protected function deleteOldProfileImage($path) {
+        Storage::delete($path);
     }
 }
