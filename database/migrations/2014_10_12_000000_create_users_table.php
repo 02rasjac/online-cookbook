@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('role', User::ROLE_CHOICES)->default(User::ROLE_USER);
             $table->boolean('recipies_is_public')->default('true');
-            $table->string('profile_pic')->default('default_profile_pic.jpeg');
+            $table->string('profile_pic')->default('images/profile-images/default_profile_pic.jpeg');
             $table->rememberToken();
             $table->timestamps();
         });
