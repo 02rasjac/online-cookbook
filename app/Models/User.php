@@ -12,6 +12,8 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    const DEFAULT_USER_PROFILE_IMAGE = 'images/profile-images/default_profile_pic.jpeg';
+
     const ROLE_USER     = 'user';
     const ROLE_VERIFIED = 'verified';
     const ROLE_STAFF    = 'staff';
@@ -63,12 +65,11 @@ class User extends Authenticatable
         $path = 'images/profile-images/' . auth()->user()->name . '-profile-image.' . $img->getClientOriginalExtension();
 
         // Delete old profileimage to save storagespace
-        if (auth()->user()->profile_pic !== 'default_profile_pic.jpeg') {
+        if (auth()->user()->profile_pic !== User::DEFAULT_USER_PROFILE_IMAGE) {
             (new self())->deleteOldProfileImage(auth()->user()->profile_pic);
         }
 
         Storage::put($path, file_get_contents($img));
-        // $photo_path = $img->storePublicly($path);
         auth()->user()->update(['profile_pic' => $path]);
     }
 
