@@ -9,6 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    @routes
     <!-- Scripts -->
     <script src="{{ url('js/app.js') }}" defer></script>
 
@@ -21,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -74,7 +75,9 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+
+        <nav-bar :authenticated="{{ Auth::check() | false }}" :token="'{{ csrf_token() }}'"></nav-bar>
 
         <main class="py-4">
             @yield('content')
