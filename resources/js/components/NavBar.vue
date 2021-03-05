@@ -7,6 +7,7 @@
         <ul>
           <li><a href="">Kokbok</a></li>
           <li><a href="">Planerare</a></li>
+          <!-- User is a guest -->
           <template v-if="!authenticated">
             <li>
               <a :href="route('login')" class="secondary-link">Logga In</a>
@@ -15,24 +16,41 @@
               <a :href="route('register')" class="primary-link">Registrera</a>
             </li>
           </template>
-          <template v-else-if="authenticated">
-            <a
-              class="dropdown-item"
-              :href="route('logout')"
-              onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"
-            >
-              Logga Ut
-            </a>
 
-            <form
-              id="logout-form"
-              :action="route('logout')"
-              method="POST"
-              class="d-none"
-            >
-              <input type="hidden" name="_token" :value="token" />
-            </form>
+          <!-- User is authenticated -->
+          <template v-else-if="authenticated">
+            <dropdown-menu>
+              <template v-slot:activator>
+                <li>
+                  <img
+                    :src="profileImage"
+                    alt="Profilbild"
+                    class="profile-image"
+                  />
+                </li>
+              </template>
+              <template v-slot:content>
+                <a :href="route('home')"
+                  ><i class="fas fa-cog"></i>Inställningar</a
+                >
+                <a
+                  :href="route('logout')"
+                  onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"
+                >
+                  <i class="fas fa-sign-out-alt"></i>Logga Ut</a
+                >
+
+                <form
+                  id="logout-form"
+                  :action="route('logout')"
+                  method="POST"
+                  class="d-none"
+                >
+                  <input type="hidden" name="_token" :value="token" />
+                </form>
+              </template>
+            </dropdown-menu>
           </template>
         </ul>
       </nav>
@@ -41,8 +59,10 @@
 </template>
 
 <script>
+import DropdownMenu from "./DropdownMenu.vue";
 export default {
-  props: { authenticated: Number, token: String },
+  components: { DropdownMenu },
+  props: { authenticated: Number, token: String, profileImage: String },
 };
 </script>
 
@@ -75,36 +95,44 @@ header {
   ul {
     display: flex;
 
-    li a {
+    li {
       padding: 0 0.6em;
-      margin-left: 0.8em;
-      transition-duration: $transition-hover-dur;
+      height: 2em;
 
-      &:hover {
-        color: darken($primary-text-color, 20);
+      .profile-image {
+        height: 2em;
+      }
+
+      a {
+        margin-left: 0.8em;
         transition-duration: $transition-hover-dur;
-        text-decoration: underline;
-      }
-
-      &.primary-link {
-        @include primary-link($secondary-color);
-        color: $secondary-text-color;
-        padding: 0 0.8em;
-
-        &:hover {
-          color: lighten($secondary-text-color, 20);
-          transition-duration: $transition-hover-dur;
-        }
-      }
-
-      &.secondary-link {
-        @include secondary-link($secondary-color);
-        color: $primary-text-color;
-        padding: 0 0.8em;
 
         &:hover {
           color: darken($primary-text-color, 20);
           transition-duration: $transition-hover-dur;
+          text-decoration: underline;
+        }
+
+        &.primary-link {
+          @include primary-link($secondary-color);
+          color: $secondary-text-color;
+          padding: 0 0.8em;
+
+          &:hover {
+            color: lighten($secondary-text-color, 20);
+            transition-duration: $transition-hover-dur;
+          }
+        }
+
+        &.secondary-link {
+          @include secondary-link($secondary-color);
+          color: $primary-text-color;
+          padding: 0 0.8em;
+
+          &:hover {
+            color: darken($primary-text-color, 20);
+            transition-duration: $transition-hover-dur;
+          }
         }
       }
     }
