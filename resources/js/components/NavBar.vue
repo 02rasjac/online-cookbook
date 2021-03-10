@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <header>
+    <header class="container">
       <a :href="route('index')" class="site-name">Kokboken Online</a>
 
       <nav>
@@ -74,7 +74,6 @@ $transition-hover-dur: 0.5s;
 .wrapper {
   position: absolute;
   top: 0;
-  padding: 1.5em;
   width: 100vw;
   margin: 0 auto;
   background-color: $primary-color;
@@ -85,8 +84,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
 
   .site-name {
     font-weight: bold;

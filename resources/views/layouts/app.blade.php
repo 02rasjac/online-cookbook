@@ -34,9 +34,11 @@
 
         
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
+
+        <cookbook-footer></cookbook-footer>
     </div>
 </body>
 </html>
