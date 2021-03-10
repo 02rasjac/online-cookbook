@@ -87,6 +87,11 @@ header {
 
   .site-name {
     font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      color: $primary-text-color;
+    }
   }
 
   ul {
@@ -102,13 +107,6 @@ header {
 
       a {
         margin-left: 0.8em;
-        transition-duration: $transition-hover-dur;
-
-        &:hover {
-          color: darken($primary-text-color, 20);
-          transition-duration: $transition-hover-dur;
-          text-decoration: underline;
-        }
 
         &.primary-link {
           @include primary-link($secondary-color);

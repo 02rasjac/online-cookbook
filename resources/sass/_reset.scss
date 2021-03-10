@@ -12,12 +12,12 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 }
 
 a {
-    color: white;
+    color: $primary-text-color;
     text-decoration: none;
 
     &:hover {
-        color: white;
-        text-decoration: none;
+        color: darken($primary-text-color, 10%);
+        text-decoration: underline;
     }
 }
 

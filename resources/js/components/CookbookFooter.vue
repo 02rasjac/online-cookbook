@@ -46,6 +46,9 @@
         </ul>
       </div>
     </div>
+    <div class="second-footer">
+      <p>&copy; Rasmus Jacklin 2021</p>
+    </div>
   </footer>
 </template>
 
@@ -76,6 +79,16 @@ export default {};
     font-size: 1.3rem;
     font-weight: 600;
     color: $primary-text-color;
+    text-transform: uppercase;
   }
+}
+
+.second-footer {
+  text-align: center;
+  color: $primary-text-color;
+  font-size: 0.9em;
+  font-weight: 300;
+  background-color: darken($primary-color, 10%);
+  padding: 0.4em 0;
 }
 </style>
