@@ -1862,6 +1862,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -6563,7 +6597,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "[data-v-7f0d1752]:root {\n  box-sizing: border-box;\n  font-family: \"Poppins\", sans-serif;\n  font-size: 16px;\n}\nbody[data-v-7f0d1752], h1[data-v-7f0d1752], h2[data-v-7f0d1752], h3[data-v-7f0d1752], h4[data-v-7f0d1752], h5[data-v-7f0d1752], h6[data-v-7f0d1752], p[data-v-7f0d1752], ol[data-v-7f0d1752], ul[data-v-7f0d1752] {\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n  margin-top: 5vh;\n}\na[data-v-7f0d1752] {\n  color: white;\n  text-decoration: none;\n}\na[data-v-7f0d1752]:hover {\n  color: white;\n  text-decoration: none;\n}\nol[data-v-7f0d1752], ul[data-v-7f0d1752] {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nimg[data-v-7f0d1752] {\n  max-width: 100%;\n  height: auto;\n}\n.d-none[data-v-7f0d1752] {\n  display: none;\n}\n.wrapper[data-v-7f0d1752] {\n  width: 100vw;\n}\n.container[data-v-7f0d1752] {\n  max-width: 1200px;\n  padding: 1.5em;\n  margin: auto;\n}\nmain[data-v-7f0d1752] {\n  margin: auto;\n  margin-top: 80px;\n  max-width: 1200px;\n  min-height: 80vh;\n}\n.wrapper[data-v-7f0d1752] {\n  background-color: #A402CD;\n}\n.container[data-v-7f0d1752] {\n  display: flex;\n  justify-content: space-between;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "[data-v-7f0d1752]:root {\n  box-sizing: border-box;\n  font-family: \"Poppins\", sans-serif;\n  font-size: 16px;\n}\nbody[data-v-7f0d1752], h1[data-v-7f0d1752], h2[data-v-7f0d1752], h3[data-v-7f0d1752], h4[data-v-7f0d1752], h5[data-v-7f0d1752], h6[data-v-7f0d1752], p[data-v-7f0d1752], ol[data-v-7f0d1752], ul[data-v-7f0d1752] {\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n}\na[data-v-7f0d1752] {\n  color: white;\n  text-decoration: none;\n}\na[data-v-7f0d1752]:hover {\n  color: white;\n  text-decoration: none;\n}\nol[data-v-7f0d1752], ul[data-v-7f0d1752] {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nimg[data-v-7f0d1752] {\n  max-width: 100%;\n  height: auto;\n}\n.d-none[data-v-7f0d1752] {\n  display: none;\n}\n.wrapper[data-v-7f0d1752] {\n  width: 100vw;\n}\n.container[data-v-7f0d1752] {\n  max-width: 1200px;\n  padding: 1.5em;\n  margin: auto;\n}\nmain[data-v-7f0d1752] {\n  margin: auto;\n  margin-top: 80px;\n  max-width: 1200px;\n  min-height: 80vh;\n}\n.wrapper[data-v-7f0d1752] {\n  background-color: #A402CD;\n}\n.container[data-v-7f0d1752] {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n.container .column[data-v-7f0d1752]:nth-of-type(2) {\n  text-align: center;\n}\n.container .column[data-v-7f0d1752]:last-of-type {\n  text-align: right;\n}\n.container h3[data-v-7f0d1752] {\n  font-size: 1.3rem;\n  font-weight: 600;\n  color: #f4f4f4;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6588,7 +6622,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "[data-v-f0206e0a]:root {\n  box-sizing: border-box;\n  font-family: \"Poppins\", sans-serif;\n  font-size: 16px;\n}\nbody[data-v-f0206e0a], h1[data-v-f0206e0a], h2[data-v-f0206e0a], h3[data-v-f0206e0a], h4[data-v-f0206e0a], h5[data-v-f0206e0a], h6[data-v-f0206e0a], p[data-v-f0206e0a], ol[data-v-f0206e0a], ul[data-v-f0206e0a] {\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n  margin-top: 5vh;\n}\na[data-v-f0206e0a] {\n  color: white;\n  text-decoration: none;\n}\na[data-v-f0206e0a]:hover {\n  color: white;\n  text-decoration: none;\n}\nol[data-v-f0206e0a], ul[data-v-f0206e0a] {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nimg[data-v-f0206e0a] {\n  max-width: 100%;\n  height: auto;\n}\n.d-none[data-v-f0206e0a] {\n  display: none;\n}\n.wrapper[data-v-f0206e0a] {\n  width: 100vw;\n}\n.container[data-v-f0206e0a] {\n  max-width: 1200px;\n  padding: 1.5em;\n  margin: auto;\n}\nmain[data-v-f0206e0a] {\n  margin: auto;\n  margin-top: 80px;\n  max-width: 1200px;\n  min-height: 80vh;\n}\n.dropdown-container[data-v-f0206e0a] {\n  position: relative;\n  display: inline-block;\n}\n.dropdown-container:hover .dropdown-content[data-v-f0206e0a] {\n  display: block;\n}\n.dropdown-content[data-v-f0206e0a] {\n  display: none;\n  position: absolute;\n  right: 0;\n  background-color: #f8fafc;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 1;\n}\n.dropdown-content a[data-v-f0206e0a] {\n  color: #2b2b2b;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n.dropdown-content a[data-v-f0206e0a]:hover {\n  background-color: #ddd;\n  transition-duration: 0.5s;\n}\n.fas[data-v-f0206e0a] {\n  margin-right: 0.5em;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "[data-v-f0206e0a]:root {\n  box-sizing: border-box;\n  font-family: \"Poppins\", sans-serif;\n  font-size: 16px;\n}\nbody[data-v-f0206e0a], h1[data-v-f0206e0a], h2[data-v-f0206e0a], h3[data-v-f0206e0a], h4[data-v-f0206e0a], h5[data-v-f0206e0a], h6[data-v-f0206e0a], p[data-v-f0206e0a], ol[data-v-f0206e0a], ul[data-v-f0206e0a] {\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n}\na[data-v-f0206e0a] {\n  color: white;\n  text-decoration: none;\n}\na[data-v-f0206e0a]:hover {\n  color: white;\n  text-decoration: none;\n}\nol[data-v-f0206e0a], ul[data-v-f0206e0a] {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nimg[data-v-f0206e0a] {\n  max-width: 100%;\n  height: auto;\n}\n.d-none[data-v-f0206e0a] {\n  display: none;\n}\n.wrapper[data-v-f0206e0a] {\n  width: 100vw;\n}\n.container[data-v-f0206e0a] {\n  max-width: 1200px;\n  padding: 1.5em;\n  margin: auto;\n}\nmain[data-v-f0206e0a] {\n  margin: auto;\n  margin-top: 80px;\n  max-width: 1200px;\n  min-height: 80vh;\n}\n.dropdown-container[data-v-f0206e0a] {\n  position: relative;\n  display: inline-block;\n}\n.dropdown-container:hover .dropdown-content[data-v-f0206e0a] {\n  display: block;\n}\n.dropdown-content[data-v-f0206e0a] {\n  display: none;\n  position: absolute;\n  right: 0;\n  background-color: #f8fafc;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 1;\n}\n.dropdown-content a[data-v-f0206e0a] {\n  color: #2b2b2b;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n.dropdown-content a[data-v-f0206e0a]:hover {\n  background-color: #ddd;\n  transition-duration: 0.5s;\n}\n.fas[data-v-f0206e0a] {\n  margin-right: 0.5em;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6613,7 +6647,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "[data-v-5dd24bca]:root {\n  box-sizing: border-box;\n  font-family: \"Poppins\", sans-serif;\n  font-size: 16px;\n}\nbody[data-v-5dd24bca], h1[data-v-5dd24bca], h2[data-v-5dd24bca], h3[data-v-5dd24bca], h4[data-v-5dd24bca], h5[data-v-5dd24bca], h6[data-v-5dd24bca], p[data-v-5dd24bca], ol[data-v-5dd24bca], ul[data-v-5dd24bca] {\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n  margin-top: 5vh;\n}\na[data-v-5dd24bca] {\n  color: white;\n  text-decoration: none;\n}\na[data-v-5dd24bca]:hover {\n  color: white;\n  text-decoration: none;\n}\nol[data-v-5dd24bca], ul[data-v-5dd24bca] {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nimg[data-v-5dd24bca] {\n  max-width: 100%;\n  height: auto;\n}\n.d-none[data-v-5dd24bca] {\n  display: none;\n}\n.wrapper[data-v-5dd24bca] {\n  width: 100vw;\n}\n.container[data-v-5dd24bca] {\n  max-width: 1200px;\n  padding: 1.5em;\n  margin: auto;\n}\nmain[data-v-5dd24bca] {\n  margin: auto;\n  margin-top: 80px;\n  max-width: 1200px;\n  min-height: 80vh;\n}\n.wrapper[data-v-5dd24bca] {\n  position: absolute;\n  top: 0;\n  width: 100vw;\n  margin: 0 auto;\n  background-color: #A402CD;\n  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.21);\n}\nheader[data-v-5dd24bca] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\nheader .site-name[data-v-5dd24bca] {\n  font-weight: bold;\n}\nheader ul[data-v-5dd24bca] {\n  display: flex;\n}\nheader ul li[data-v-5dd24bca] {\n  padding: 0 0.6em;\n  height: 2em;\n}\nheader ul li .profile-image[data-v-5dd24bca] {\n  height: 2em;\n}\nheader ul li a[data-v-5dd24bca] {\n  margin-left: 0.8em;\n  transition-duration: 0.5s;\n}\nheader ul li a[data-v-5dd24bca]:hover {\n  color: #c1c1c1;\n  transition-duration: 0.5s;\n  text-decoration: underline;\n}\nheader ul li a.primary-link[data-v-5dd24bca] {\n  border-radius: 10px;\n  border: 2px solid #CDA002;\n  background-color: #CDA002;\n  font-weight: bolder;\n  color: #2b2b2b;\n  padding: 0 0.8em;\n}\nheader ul li a.primary-link[data-v-5dd24bca]:hover {\n  color: #5e5e5e;\n  transition-duration: 0.5s;\n}\nheader ul li a.secondary-link[data-v-5dd24bca] {\n  border-radius: 10px;\n  border: 2px solid #CDA002;\n  font-weight: normal;\n  color: #f4f4f4;\n  padding: 0 0.8em;\n}\nheader ul li a.secondary-link[data-v-5dd24bca]:hover {\n  color: #c1c1c1;\n  transition-duration: 0.5s;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "[data-v-5dd24bca]:root {\n  box-sizing: border-box;\n  font-family: \"Poppins\", sans-serif;\n  font-size: 16px;\n}\nbody[data-v-5dd24bca], h1[data-v-5dd24bca], h2[data-v-5dd24bca], h3[data-v-5dd24bca], h4[data-v-5dd24bca], h5[data-v-5dd24bca], h6[data-v-5dd24bca], p[data-v-5dd24bca], ol[data-v-5dd24bca], ul[data-v-5dd24bca] {\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n}\na[data-v-5dd24bca] {\n  color: white;\n  text-decoration: none;\n}\na[data-v-5dd24bca]:hover {\n  color: white;\n  text-decoration: none;\n}\nol[data-v-5dd24bca], ul[data-v-5dd24bca] {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\nimg[data-v-5dd24bca] {\n  max-width: 100%;\n  height: auto;\n}\n.d-none[data-v-5dd24bca] {\n  display: none;\n}\n.wrapper[data-v-5dd24bca] {\n  width: 100vw;\n}\n.container[data-v-5dd24bca] {\n  max-width: 1200px;\n  padding: 1.5em;\n  margin: auto;\n}\nmain[data-v-5dd24bca] {\n  margin: auto;\n  margin-top: 80px;\n  max-width: 1200px;\n  min-height: 80vh;\n}\n.wrapper[data-v-5dd24bca] {\n  position: absolute;\n  top: 0;\n  width: 100vw;\n  margin: 0 auto;\n  background-color: #A402CD;\n  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.21);\n}\nheader[data-v-5dd24bca] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\nheader .site-name[data-v-5dd24bca] {\n  font-weight: bold;\n}\nheader ul[data-v-5dd24bca] {\n  display: flex;\n}\nheader ul li[data-v-5dd24bca] {\n  padding: 0 0.6em;\n  height: 2em;\n}\nheader ul li .profile-image[data-v-5dd24bca] {\n  height: 2em;\n}\nheader ul li a[data-v-5dd24bca] {\n  margin-left: 0.8em;\n  transition-duration: 0.5s;\n}\nheader ul li a[data-v-5dd24bca]:hover {\n  color: #c1c1c1;\n  transition-duration: 0.5s;\n  text-decoration: underline;\n}\nheader ul li a.primary-link[data-v-5dd24bca] {\n  border-radius: 10px;\n  border: 2px solid #CDA002;\n  background-color: #CDA002;\n  font-weight: bolder;\n  color: #2b2b2b;\n  padding: 0 0.8em;\n}\nheader ul li a.primary-link[data-v-5dd24bca]:hover {\n  color: #5e5e5e;\n  transition-duration: 0.5s;\n}\nheader ul li a.secondary-link[data-v-5dd24bca] {\n  border-radius: 10px;\n  border: 2px solid #CDA002;\n  font-weight: normal;\n  color: #f4f4f4;\n  padding: 0 0.8em;\n}\nheader ul li a.secondary-link[data-v-5dd24bca]:hover {\n  color: #c1c1c1;\n  transition-duration: 0.5s;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38347,25 +38381,104 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", { staticClass: "wrapper" }, [
+    _c("div", { staticClass: "container" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "column" }, [
+        _c("h3", [_vm._v("Länkar")]),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", [
+            _c("a", { attrs: { href: _vm.route("index") } }, [
+              _vm._v("Startsidan")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: _vm.route("register") } }, [
+              _vm._v("Registrera")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: _vm.route("login") } }, [
+              _vm._v("Logga In")
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2)
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(3)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "wrapper" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "column" }, [
-          _c("h3", [_vm._v("Kontakta Oss")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _c("a", { attrs: { href: "mailto:" } }, [
-                _c("i", { staticClass: "fas fa-envelope" }),
-                _vm._v(" example@gmail.com")
-              ])
-            ])
+    return _c("div", { staticClass: "column" }, [
+      _c("h3", [_vm._v("Kontakta Oss")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("a", { attrs: { href: "mailto:" } }, [
+            _c("i", { staticClass: "fas fa-envelope" }),
+            _vm._v(" example@gmail.com")
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "route('cookbook')" } }, [_vm._v("Kokbok")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "route('planer')" } }, [
+        _vm._v("Måltidsplanerare")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "column" }, [
+      _c("h3", [_vm._v("Sociala Medier")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v("Twitter "),
+            _c("i", { staticClass: "fab fa-twitter" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v("Instagram "),
+            _c("i", { staticClass: "fab fa-instagram" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v("Github "),
+            _c("i", { staticClass: "fab fa-github" })
           ])
         ])
       ])
