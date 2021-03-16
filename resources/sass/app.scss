@@ -189,3 +189,62 @@ footer {
         padding: 0.4em 0;
     }
 }
+
+//=======================
+//------ AUTH-FORM ------
+//=======================
+
+.auth-form {
+    width: 40%;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 10%;
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    .input-container {
+        padding: 0.5em 0;
+
+        input {
+            width: 100%;
+            padding: 0.4em;
+
+            &[type="checkbox"] {
+                width: auto;
+            }
+
+            &[type="submit"] {
+                @include primary-link($primary-color);
+                color: $primary-text-color;
+                display: block;
+                width: 100%;
+                font-size: larger;
+                padding-top: 0.2em;
+                padding-bottom: 0.2em;
+
+                &:hover {
+                    background-color: darken($primary-color, 5);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .small-link {
+        color: rgb(0, 81, 255);
+        font-size: small;
+        display: block;
+    }
+
+    #no-account {
+        font-size: small;
+        text-align: center;
+
+        .small-link {
+            display: inline;
+        }
+    }
+}

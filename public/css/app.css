@@ -2,7 +2,7 @@
 :root {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body,
@@ -198,6 +198,63 @@ footer .second-footer {
   font-weight: 300;
   background-color: #7c029a;
   padding: 0.4em 0;
+}
+
+.auth-form {
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.3);
+  margin-top: 10%;
+}
+
+.auth-form h1 {
+  font-size: 1.4em;
+}
+
+.auth-form .input-container {
+  padding: 0.5em 0;
+}
+
+.auth-form .input-container input {
+  width: 100%;
+  padding: 0.4em;
+}
+
+.auth-form .input-container input[type=checkbox] {
+  width: auto;
+}
+
+.auth-form .input-container input[type=submit] {
+  border-radius: 10px;
+  border: 2px solid #A402CD;
+  background-color: #A402CD;
+  font-weight: bolder;
+  color: #f4f4f4;
+  display: block;
+  width: 100%;
+  font-size: larger;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.auth-form .input-container input[type=submit]:hover {
+  background-color: #9002b4;
+  cursor: pointer;
+}
+
+.auth-form .small-link {
+  color: #0051ff;
+  font-size: small;
+  display: block;
+}
+
+.auth-form #no-account {
+  font-size: small;
+  text-align: center;
+}
+
+.auth-form #no-account .small-link {
+  display: inline;
 }
 
 
