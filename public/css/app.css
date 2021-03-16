@@ -216,7 +216,7 @@ footer .second-footer {
 }
 
 .auth-form .input-container input {
-  width: 100%;
+  width: calc(100% - 1em);
   padding: 0.4em;
 }
 
@@ -248,12 +248,12 @@ footer .second-footer {
   display: block;
 }
 
-.auth-form #no-account {
+.auth-form .subinfo {
   font-size: small;
   text-align: center;
 }
 
-.auth-form #no-account .small-link {
+.auth-form .subinfo .small-link {
   display: inline;
 }
 

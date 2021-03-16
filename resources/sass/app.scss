@@ -209,7 +209,7 @@ footer {
         padding: 0.5em 0;
 
         input {
-            width: 100%;
+            width: calc(100% - 1em);
             padding: 0.4em;
 
             &[type="checkbox"] {
@@ -239,7 +239,7 @@ footer {
         display: block;
     }
 
-    #no-account {
+    .subinfo {
         font-size: small;
         text-align: center;
 

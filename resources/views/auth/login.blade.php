@@ -55,7 +55,7 @@
         <div class="input-container">
           <input type="submit" value="Logga in">
         </div>
-        <div id="no-account">
+        <div class="subinfo">
           Har du inget konto?
           <a class="small-link" href="{{ route('register') }}">
             Skapa ett här.
