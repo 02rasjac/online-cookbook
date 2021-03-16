@@ -63,4 +63,141 @@ main {
   min-height: 80vh;
 }
 
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: #A402CD;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.21);
+}
+
+.navbar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar header .site-name {
+  font-weight: bold;
+}
+
+.navbar header .site-name:hover {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.navbar header ul {
+  display: flex;
+}
+
+.navbar header ul li {
+  padding: 0 0.6em;
+  height: 2em;
+}
+
+.navbar header ul li .profile-image {
+  height: 2em;
+}
+
+.navbar header ul li a {
+  margin-left: 0.8em;
+}
+
+.navbar header ul li a.primary-link {
+  border-radius: 10px;
+  border: 2px solid #CDA002;
+  background-color: #CDA002;
+  font-weight: bolder;
+  color: #2b2b2b;
+  padding: 0 0.8em;
+}
+
+.navbar header ul li a.primary-link:hover {
+  color: #5e5e5e;
+  transition-duration: 0.5s;
+}
+
+.navbar header ul li a.secondary-link {
+  border-radius: 10px;
+  border: 2px solid #CDA002;
+  font-weight: normal;
+  color: #f4f4f4;
+  padding: 0 0.8em;
+}
+
+.navbar header ul li a.secondary-link:hover {
+  color: #c1c1c1;
+  transition-duration: 0.5s;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-container .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f8fafc;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-container .dropdown-content a {
+  color: #2b2b2b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-container .dropdown-content a:hover {
+  background-color: #ddd;
+  transition-duration: 0.5s;
+}
+
+.dropdown-container .fas {
+  margin-right: 0.5em;
+}
+
+footer.wrapper {
+  background-color: #A402CD;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .container .column:nth-of-type(2) {
+  text-align: center;
+}
+
+footer .container .column:last-of-type {
+  text-align: right;
+}
+
+footer .container h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
+footer .second-footer {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 0.9em;
+  font-weight: 300;
+  background-color: #7c029a;
+  padding: 0.4em 0;
+}
+
 

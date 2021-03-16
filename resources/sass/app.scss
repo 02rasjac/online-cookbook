@@ -1,13 +1,13 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
 
-@import 'reset';
+@import "reset";
 
 @mixin primary-link($color) {
     border-radius: 10px;
@@ -41,4 +41,151 @@ main {
     margin-top: 80px;
     max-width: $max-width;
     min-height: 80vh;
+}
+
+//====================
+//------ NAVBAR ------
+//====================
+
+.navbar {
+    $transition-hover-dur: 0.5s;
+
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: $primary-color;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.21);
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .site-name {
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: none;
+                color: $primary-text-color;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                padding: 0 0.6em;
+                height: 2em;
+
+                .profile-image {
+                    height: 2em;
+                }
+
+                a {
+                    margin-left: 0.8em;
+
+                    &.primary-link {
+                        @include primary-link($secondary-color);
+                        color: $secondary-text-color;
+                        padding: 0 0.8em;
+
+                        &:hover {
+                            color: lighten($secondary-text-color, 20);
+                            transition-duration: $transition-hover-dur;
+                        }
+                    }
+
+                    &.secondary-link {
+                        @include secondary-link($secondary-color);
+                        color: $primary-text-color;
+                        padding: 0 0.8em;
+
+                        &:hover {
+                            color: darken($primary-text-color, 20);
+                            transition-duration: $transition-hover-dur;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//======================
+//------ DROPDOWN ------
+//======================
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: $body-bg;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        a {
+            color: $secondary-text-color;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                background-color: #ddd;
+                transition-duration: 0.5s;
+            }
+        }
+    }
+
+    .fas {
+        margin-right: 0.5em;
+    }
+}
+
+//====================
+//------ FOOTER ------
+//====================
+
+footer {
+    &.wrapper {
+        background-color: $primary-color;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .column:nth-of-type(2) {
+            text-align: center;
+        }
+
+        .column:last-of-type {
+            text-align: right;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $primary-text-color;
+            text-transform: uppercase;
+        }
+    }
+
+    .second-footer {
+        text-align: center;
+        color: $primary-text-color;
+        font-size: 0.9em;
+        font-weight: 300;
+        background-color: darken($primary-color, 10%);
+        padding: 0.4em 0;
+    }
 }
