@@ -1,0 +1,26 @@
+@mixin primary-link($color) {
+    border-radius: 10px;
+    border: 2px solid $color;
+    background-color: $color;
+    font-weight: bolder;
+}
+
+@mixin secondary-link($color) {
+    border-radius: 10px;
+    border: 2px solid $color;
+    font-weight: normal;
+}
+
+.d-none {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    max-width: $max-width;
+    padding: 1.5em;
+    margin: auto;
+}

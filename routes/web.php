@@ -16,7 +16,7 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 })->name('index');
 
 Auth::routes();

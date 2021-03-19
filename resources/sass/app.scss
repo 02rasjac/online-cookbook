@@ -1,5 +1,5 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 // Variables
 @import "variables";
@@ -8,38 +8,16 @@
 // @import '~bootstrap/scss/bootstrap';
 
 @import "reset";
+@import "helpers";
 
-@mixin primary-link($color) {
-    border-radius: 10px;
-    border: 2px solid $color;
-    background-color: $color;
-    font-weight: bolder;
-}
-
-@mixin secondary-link($color) {
-    border-radius: 10px;
-    border: 2px solid $color;
-    font-weight: normal;
-}
-
-.d-none {
-    display: none;
-}
-
-.wrapper {
-    width: 100%;
-}
-
-.container {
-    max-width: $max-width;
-    padding: 1.5em;
+.content {
     margin: auto;
+    max-width: $max-width;
 }
 
-main {
-    margin: auto;
-    margin-top: 80px;
-    max-width: $max-width;
+main,
+.content {
+    margin-top: 70px;
     min-height: 80vh;
 }
 
@@ -55,6 +33,7 @@ main {
     margin: 0 auto;
     background-color: $primary-color;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.21);
+    z-index: 10;
 
     header {
         display: flex;
@@ -62,8 +41,11 @@ main {
         align-items: center;
 
         .site-name {
-            font-weight: bold;
+            height: 1.7em;
 
+            svg {
+                height: 100%;
+            }
             &:hover {
                 text-decoration: none;
                 color: $primary-text-color;
@@ -72,10 +54,10 @@ main {
 
         ul {
             display: flex;
+            align-items: center;
 
             li {
                 padding: 0 0.6em;
-                height: 2em;
 
                 .profile-image {
                     height: 2em;
@@ -244,6 +226,44 @@ footer {
 
         .small-link {
             display: inline;
+        }
+    }
+}
+
+//=======================
+//------ STARTPAGE ------
+//=======================
+
+#startpage {
+    width: 100%;
+
+    .hero {
+        position: absoulte;
+        background-color: black;
+        overflow: hidden;
+        height: calc(100vh - 70px);
+
+        .hero-image {
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        .content {
+            position: relative;
+            top: -100%;
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 600;
+                color: $primary-text-color;
+                line-height: 150%;
+
+                strong {
+                    text-decoration: underline solid $primary-text-color;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }

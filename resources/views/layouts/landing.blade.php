@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{{ Storage::url('images/small-logo.svg') }}">
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>Kokboken Online: Startsida</title>
 
   <!-- Scripts -->
   <script src="{{ url('js/app.js') }}" defer></script>
@@ -31,7 +32,7 @@
 
     @include('components.navbar')
 
-    <main class="content">
+    <main id="startpage">
       @yield('content')
     </main>
 
