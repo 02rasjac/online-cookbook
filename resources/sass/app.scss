@@ -69,7 +69,6 @@ main,
                     &.primary-link {
                         @include primary-link($secondary-color);
                         color: $secondary-text-color;
-                        padding: 0 0.8em;
 
                         &:hover {
                             color: lighten($secondary-text-color, 20);
@@ -80,7 +79,6 @@ main,
                     &.secondary-link {
                         @include secondary-link($secondary-color);
                         color: $primary-text-color;
-                        padding: 0 0.8em;
 
                         &:hover {
                             color: darken($primary-text-color, 20);
@@ -262,6 +260,31 @@ footer {
                 strong {
                     text-decoration: underline solid $primary-text-color;
                     font-weight: 700;
+                }
+            }
+
+            .description {
+                color: $primary-text-color;
+                font-size: large;
+                max-width: 60%;
+                margin: 1em 0;
+            }
+
+            a {
+                display: inline-block;
+                margin-right: 1em;
+                min-width: 100px;
+                text-align: center;
+
+                &.primary-btn {
+                    @include primary-link($primary-color);
+                    font-size: 1.1em;
+                    padding: 0.2em 0.8em;
+                }
+
+                &.secondary-btn {
+                    @include secondary-link($primary-color);
+                    padding: 0.3em 0.8em;
                 }
             }
         }

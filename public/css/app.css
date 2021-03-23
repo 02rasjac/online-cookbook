@@ -118,9 +118,9 @@ main,
   border-radius: 10px;
   border: 2px solid #CDA002;
   background-color: #CDA002;
+  padding: 0 0.8em;
   font-weight: bolder;
   color: #2b2b2b;
-  padding: 0 0.8em;
 }
 
 .navbar header ul li a.primary-link:hover {
@@ -131,9 +131,9 @@ main,
 .navbar header ul li a.secondary-link {
   border-radius: 10px;
   border: 2px solid #CDA002;
+  padding: 0 0.8em;
   font-weight: normal;
   color: #f4f4f4;
-  padding: 0 0.8em;
 }
 
 .navbar header ul li a.secondary-link:hover {
@@ -238,6 +238,7 @@ footer .second-footer {
   border-radius: 10px;
   border: 2px solid #A402CD;
   background-color: #A402CD;
+  padding: 0 0.8em;
   font-weight: bolder;
   color: #f4f4f4;
   display: block;
@@ -301,6 +302,38 @@ footer .second-footer {
   -webkit-text-decoration: underline solid #f4f4f4;
           text-decoration: underline solid #f4f4f4;
   font-weight: 700;
+}
+
+#startpage .hero .content .description {
+  color: #f4f4f4;
+  font-size: large;
+  max-width: 60%;
+  margin: 1em 0;
+}
+
+#startpage .hero .content a {
+  display: inline-block;
+  margin-right: 1em;
+  min-width: 100px;
+  text-align: center;
+}
+
+#startpage .hero .content a.primary-btn {
+  border-radius: 10px;
+  border: 2px solid #A402CD;
+  background-color: #A402CD;
+  padding: 0 0.8em;
+  font-weight: bolder;
+  font-size: 1.1em;
+  padding: 0.2em 0.8em;
+}
+
+#startpage .hero .content a.secondary-btn {
+  border-radius: 10px;
+  border: 2px solid #A402CD;
+  padding: 0 0.8em;
+  font-weight: normal;
+  padding: 0.3em 0.8em;
 }
 
 

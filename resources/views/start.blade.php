@@ -8,7 +8,7 @@
         Din <strong>kokbok</strong>: Online <br>
         Din <strong>måltidsplanerare</strong>: Online
       </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consectetur animi omnis.</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consectetur animi omnis.</p>
       <a href="#about" class="primary-btn">Läs Mer</a>
       <a href="{{ route('register') }}" class="secondary-btn">Skapa Konto</a>
     </div>
