@@ -15,8 +15,7 @@
     max-width: $max-width;
 }
 
-main,
-.content {
+main {
     margin-top: 70px;
     min-height: 80vh;
 }
@@ -248,11 +247,11 @@ footer {
             opacity: 0.4;
         }
 
-        .content {
+        .container {
             position: relative;
-            top: -90%;
-            height: 90%;
-
+            top: -85%;
+        }
+        .content {
             h1 {
                 font-size: 3rem;
                 font-weight: 600;
@@ -287,6 +286,36 @@ footer {
                 &.secondary-btn {
                     @include secondary-link($primary-color);
                     padding: 0.3em 0.8em;
+                }
+            }
+        }
+
+        .recipe {
+            height: 3em;
+            padding: 0.5em;
+            display: flex;
+            color: $primary-text-color;
+            border: 2px solid $secondary-color;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: fit-content;
+
+            margin-top: 25vh;
+
+            img {
+                height: 3em;
+                border-radius: 50%;
+            }
+
+            .info {
+                margin-left: 1em;
+                line-height: 1.2em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .recipie-owner {
+                    font-size: 1.2em;
                 }
             }
         }
