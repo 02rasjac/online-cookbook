@@ -281,6 +281,7 @@ footer .second-footer {
 
 #startpage .hero .hero-image {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.4;
