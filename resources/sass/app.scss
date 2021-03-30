@@ -5,19 +5,19 @@
 @import "variables";
 
 // Bootstrap
-// @import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 @import "reset";
 @import "helpers";
 
-.content {
-    margin: auto;
-    max-width: $max-width;
-}
+// .content {
+//     margin: auto;
+//     max-width: $max-width;
+// }
 
 main {
-    margin-top: 70px;
-    min-height: 80vh;
+    // margin-top: 70px;
+    min-height: 85vh;
 }
 
 //====================
@@ -25,68 +25,12 @@ main {
 //====================
 
 .navbar {
-    $transition-hover-dur: 0.5s;
-
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
     background-color: $primary-color;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.21);
     z-index: 10;
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .site-name {
-            height: 1.7em;
-
-            svg {
-                height: 100%;
-            }
-            &:hover {
-                text-decoration: none;
-                color: $primary-text-color;
-            }
-        }
-
-        ul {
-            display: flex;
-            align-items: center;
-
-            li {
-                padding: 0 0.6em;
-
-                .profile-image {
-                    height: 2em;
-                }
-
-                a {
-                    margin-left: 0.8em;
-
-                    &.primary-link {
-                        @include primary-link($secondary-color);
-                        color: $secondary-text-color;
-
-                        &:hover {
-                            color: lighten($secondary-text-color, 20);
-                            transition-duration: $transition-hover-dur;
-                        }
-                    }
-
-                    &.secondary-link {
-                        @include secondary-link($secondary-color);
-                        color: $primary-text-color;
-
-                        &:hover {
-                            color: darken($primary-text-color, 20);
-                            transition-duration: $transition-hover-dur;
-                        }
-                    }
-                }
-            }
-        }
+    .navbar-brand img {
+        height: 1.3rem;
     }
 }
 
