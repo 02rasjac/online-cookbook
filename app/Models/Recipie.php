@@ -31,4 +31,11 @@ class Recipie extends Model
     ];
 
     const DEFAULT_THUMBNAIL = 'images/default_thumbnail.png';
+
+    /**
+     * Get the user that owns this recipie
+     */
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }

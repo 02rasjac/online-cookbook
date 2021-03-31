@@ -60,6 +60,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Get the users recipies
+     */
+    public function recipies() {
+        return $this->hasMany(Recipie::class);
+    }
+
     public static function uploadProfileImage($img) {
         // Prepend username to easier know whose profileimage that is
         $path = 'images/profile-images/' . auth()->user()->name . '-profile-image.' . $img->getClientOriginalExtension();
