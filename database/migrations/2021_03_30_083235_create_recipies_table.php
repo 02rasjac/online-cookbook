@@ -20,7 +20,7 @@ class CreateRecipiesTable extends Migration
             $table->enum('status', Recipie::STATUS_CHOICES)->default(Recipie::STATUS_PUBLISHED);
             $table->string('thumbnail')->default(Recipie::DEFAULT_THUMBNAIL);
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->integer('cook_time');
             $table->enum('difficulty', Recipie::DIFFICULTY_CHOICES);
             $table->float('rating')->nullable();
