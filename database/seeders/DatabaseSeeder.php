@@ -17,8 +17,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             RecipieSeeder::class,
+            IngredientSeeder::class,
+            IngredientGroupSeeder::class,
+            MeasurementUnitSeeder::class,
+            RecipieIngredientSeeder::class,
         ]);
 
-        User::factory()->count(5)->hasRecipies(5)->create();
+        // User::factory()->count(5)->hasRecipies(5)->create();
     }
 }

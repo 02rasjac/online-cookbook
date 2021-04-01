@@ -38,4 +38,11 @@ class Recipie extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * Get the ingredient-combinations this recipie has
+     */
+    public function recipieIngredient() {
+        return $this->hasMany(RecipieIngredient::class);
+    }
 }
