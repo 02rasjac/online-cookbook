@@ -25,5 +25,16 @@ class RecipieSeeder extends Seeder
             'difficulty' => Recipie::DIFFICULTY_MEDIUM,
             'portions' => 4,
         ]);
+
+        DB::table('recipies')->insert([
+            'user_id' => 1,
+            'status' => Recipie::STATUS_PUBLISHED,
+            'title' => 'second test recipie',
+            'description' => 'Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Duis nec urna elit. Vivamus et felis.',
+            'cook_time' => 15,
+            'difficulty' => Recipie::DIFFICULTY_MEDIUM,
+            'portions' => 4,
+        ]);
     }
 }
