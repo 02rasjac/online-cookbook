@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRecipieIngredientsTable extends Migration
+class CreateGroupIngredientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateRecipieIngredientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('recipie_ingredients', function (Blueprint $table) {
+        Schema::create('group_ingredients', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('recipie_id');
             $table->foreignId('ingredient_group_id');
             $table->foreignId('ingredient_id');
-            $table->string('measurement_name');
-            $table->foreign('measurement_name')->references('measurement_name')->on('measurement_units');
+            $table->foreignId('measurement_id');
             $table->integer('quantity');
             $table->timestamps();
         });
@@ -32,6 +30,6 @@ class CreateRecipieIngredientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recipie_ingredients');
+        Schema::dropIfExists('group_ingredients');
     }
 }

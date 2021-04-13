@@ -15,9 +15,11 @@ class IngredientGroupSeeder extends Seeder
     public function run()
     {
         DB::table('ingredient_groups')->insert([
+            'recipie_id' => 1,
             'title' => 'Homo',
         ]);
         DB::table('ingredient_groups')->insert([
+            'recipie_id' => 1,
             'title' => 'sapiens',
         ]);
     }

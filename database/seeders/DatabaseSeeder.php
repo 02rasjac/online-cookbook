@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             IngredientSeeder::class,
             IngredientGroupSeeder::class,
             MeasurementUnitSeeder::class,
-            RecipieIngredientSeeder::class,
+            GroupIngredientSeeder::class,
         ]);
 
         // User::factory()->count(5)->hasRecipies(5)->create();

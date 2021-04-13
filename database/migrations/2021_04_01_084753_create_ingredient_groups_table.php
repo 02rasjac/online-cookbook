@@ -15,6 +15,7 @@ class CreateIngredientGroupsTable extends Migration
     {
         Schema::create('ingredient_groups', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('recipie_id');
             $table->string('title');
             $table->timestamps();
         });

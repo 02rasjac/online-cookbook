@@ -14,7 +14,8 @@ class CreateMeasurementUnitsTable extends Migration
     public function up()
     {
         Schema::create('measurement_units', function (Blueprint $table) {
-            $table->string('measurement_name')->primary();
+            $table->id();
+            $table->string('measurement_name')->unique();
             $table->timestamps();
         });
     }
