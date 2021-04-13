@@ -12,7 +12,14 @@ class IngredientGroup extends Model
     /**
      * Get the ingredient-combinations this group has
      */
-    public function recipieIngredient() {
-        return $this->hasMany(RecipieIngredient::class);
+    public function recipie() {
+        return $this->belongsTo(Recipie::class);
+    }
+
+    /**
+     * Get the ingredient-combinations this group has
+     */
+    public function groupIngredient() {
+        return $this->hasMany(GroupIngredient::class);
     }
 }

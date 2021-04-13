@@ -42,7 +42,7 @@ class Recipie extends Model
     /**
      * Get the ingredient-combinations this recipie has
      */
-    public function recipieIngredient() {
-        return $this->hasMany(RecipieIngredient::class);
+    public function ingredientGroup() {
+        return $this->hasMany(IngredientGroup::class);
     }
 }

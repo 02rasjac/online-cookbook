@@ -5,19 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RecipieIngredient extends Model
+class GroupIngredient extends Model
 {
     use HasFactory;
 
     /**
-     * Get the recipie that has this ingredient-combination this recipie
-     */
-    public function recipie() {
-        return $this->belongsTo(Recipie::class);
-    }
-
-    /**
-     * Get the group the ingredient belongs to in this recipie
+     * Get the group that has this ingredient-combination this recipie
      */
     public function ingredientGroup() {
         return $this->belongsTo(IngredientGroup::class);

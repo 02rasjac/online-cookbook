@@ -12,7 +12,7 @@ class Ingredient extends Model
     /**
      * Get the ingredient-combinations this ingredient has
      */
-    public function recipieIngredient() {
-        return $this->hasMany(RecipieIngredient::class);
+    public function groupIngredient() {
+        return $this->hasMany(GroupIngredient::class);
     }
 }
