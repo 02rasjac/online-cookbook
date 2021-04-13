@@ -17,7 +17,7 @@ class CreateGroupIngredientsTable extends Migration
             $table->id();
             $table->foreignId('ingredient_group_id');
             $table->foreignId('ingredient_id');
-            $table->foreignId('measurement_id');
+            $table->foreignId('measurement_unit_id');
             $table->integer('quantity');
             $table->timestamps();
         });

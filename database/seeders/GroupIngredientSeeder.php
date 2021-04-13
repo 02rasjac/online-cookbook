@@ -17,31 +17,31 @@ class GroupIngredientSeeder extends Seeder
         DB::table('group_ingredients')->insert([
             'ingredient_group_id' => 1,
             'ingredient_id' => 1,
-            'measurement_id' => 1,
+            'measurement_unit_id' => 1,
             'quantity' => 500,
         ]);
         DB::table('group_ingredients')->insert([
             'ingredient_group_id' => 1,
             'ingredient_id' => 2,
-            'measurement_id' => 2,
+            'measurement_unit_id' => 2,
             'quantity' => 3,
         ]);
         DB::table('group_ingredients')->insert([
             'ingredient_group_id' => 1,
             'ingredient_id' => 3,
-            'measurement_id' => 3,
+            'measurement_unit_id' => 3,
             'quantity' => 2,
         ]);
         DB::table('group_ingredients')->insert([
             'ingredient_group_id' => 2,
             'ingredient_id' => 4,
-            'measurement_id' => 1,
+            'measurement_unit_id' => 1,
             'quantity' => 50,
         ]);
         DB::table('group_ingredients')->insert([
             'ingredient_group_id' => 2,
             'ingredient_id' => 5,
-            'measurement_id' => 4,
+            'measurement_unit_id' => 4,
             'quantity' => 4,
         ]);
     }
