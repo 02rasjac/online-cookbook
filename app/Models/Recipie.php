@@ -45,4 +45,11 @@ class Recipie extends Model
     public function ingredientGroup() {
         return $this->hasMany(IngredientGroup::class);
     }
+
+    /**
+     * Get the instructions this recipie has
+     */
+    public function instruction() {
+        return $this->hasMany(Instruction::class);
+    }
 }
