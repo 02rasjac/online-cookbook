@@ -2,6 +2,11 @@
 
 @section('content')
   <h1>{{ $recipie->title }}</h1>
+  <section>
+    <p><i class="fas fa-clock"></i> {{ $recipie->cook_time }}</p>
+    <p><i class="fab fa-apple"></i> {{ $recipie->numOfIngredients() }}</p>
+    <p>{{ $recipie->difficulty }}</p>
+  </section>
   <p>{{ $recipie->description }}</p>
 
   <section>

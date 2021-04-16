@@ -52,4 +52,17 @@ class Recipie extends Model
     public function instruction() {
         return $this->hasMany(Instruction::class);
     }
+
+    /**
+     * @return int Number of ingredients that belongs to this recipie
+     */
+    public function numOfIngredients() {
+        $num = 0;
+
+        foreach ($this->ingredientGroup as $group) {
+            $num += $group->groupIngredient->count();
+        }
+
+        return $num;
+    }
 }
