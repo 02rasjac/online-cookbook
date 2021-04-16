@@ -3,6 +3,17 @@
 @section('content')
   <h1>{{ $recipie->title }}</h1>
   <p>{{ $recipie->description }}</p>
+
+  <section>
+    <h2>Instruktioner</h2>
+    @foreach ($recipie->instruction as $instruction)
+        <p>{{ $instruction->text }}</p>
+        @if ($instruction->timer !== null)
+            <button>Timer: {{ $instruction->timer }} min</button>
+        @endif
+    @endforeach
+  </section>
+
   @if ($recipie->ingredientGroup)
     <aside>
       @foreach ($recipie->ingredientGroup as $group)
