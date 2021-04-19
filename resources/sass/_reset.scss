@@ -20,11 +20,11 @@ ul {
 }
 
 a {
-    color: $primary-text-color;
+    color: $text-primary;
     text-decoration: none;
 
     &:hover {
-        color: darken($primary-text-color, 10%);
+        color: darken($text-primary, 10%);
         text-decoration: underline;
     }
 }

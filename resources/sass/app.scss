@@ -55,7 +55,7 @@ main {
         z-index: 1;
 
         a {
-            color: $secondary-text-color;
+            color: $text-secondary;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -97,14 +97,14 @@ footer {
         h3 {
             font-size: 1.3rem;
             font-weight: 600;
-            color: $primary-text-color;
+            color: $text-primary;
             text-transform: uppercase;
         }
     }
 
     .second-footer {
         text-align: center;
-        color: $primary-text-color;
+        color: $text-primary;
         font-size: 0.9em;
         font-weight: 300;
         background-color: darken($primary, 10%);
@@ -140,7 +140,7 @@ footer {
 
             &[type="submit"] {
                 @include primary-link($primary);
-                color: $primary-text-color;
+                color: $text-primary;
                 display: block;
                 width: 100%;
                 font-size: larger;
@@ -199,17 +199,17 @@ footer {
             h1 {
                 font-size: 3rem;
                 font-weight: 600;
-                color: $primary-text-color;
+                color: $text-primary;
                 line-height: 150%;
 
                 strong {
-                    text-decoration: underline solid $primary-text-color;
+                    text-decoration: underline solid $text-primary;
                     font-weight: 700;
                 }
             }
 
             .description {
-                color: $primary-text-color;
+                color: $text-primary;
                 font-size: large;
                 max-width: 60%;
                 margin: 1em 0;
@@ -238,7 +238,7 @@ footer {
             height: 3em;
             padding: 0.5em;
             display: flex;
-            color: $primary-text-color;
+            color: $text-primary;
             border: 2px solid $secondary;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.3);

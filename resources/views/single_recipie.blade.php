@@ -3,7 +3,7 @@
 @section('content')
   <div class="container" id="recipie">
     <header class="my-4">
-      <h1 class="text-capitalize">{{ $recipie->title }}</h1>
+      <h1 class="text-capitalize fw-bold text-dark">{{ $recipie->title }}</h1>
       <section class="d-flex">
         <p class="me-3"><i class="fas fa-clock"></i> {{ $recipie->cook_time }} min</p>
         <p class="me-3"><i class="fab fa-apple"></i> {{ $recipie->numOfIngredients() }} ingredienser</p>
@@ -13,14 +13,18 @@
 
     <section class="row">
       <section class="col-sm-8">
-        <p class="fw-bold">{{ $recipie->description }}</p>
+        <p class="fw-bold text-body mb-5 fs-5">{{ $recipie->description }}</p>
 
-        <h2>Instruktioner</h2>
         @foreach ($recipie->instruction as $instruction)
-            <p>{{ $instruction->text }}</p>
+          <div class="instruction mb-3">
+            <div class="d-inline-block">
+              <input type="checkbox" id="inst-{{ $instruction->id }}" name="inst-{{ $instruction->id }}">
+              <label for="inst-{{ $instruction->id }}" class="lh-sm fs-5 d-inline">{{ $instruction->text }}</label>
+            </div>
             @if ($instruction->timer !== null)
-                <button>Timer: {{ $instruction->timer }} min</button>
+                <button class="ms-3 mt-2 d-block">Timer: {{ $instruction->timer }} min</button>
             @endif
+          </div>
         @endforeach
       </section>
   
