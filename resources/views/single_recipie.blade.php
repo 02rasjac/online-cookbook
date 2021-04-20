@@ -4,12 +4,12 @@
   <div class="container" id="recipie">
     <header class="my-4">
       <h1 class="text-capitalize fw-bold text-dark">{{ $recipie->title }}</h1>
-      <section class="d-flex">
+      <section class="d-flex mt-2">
         <p class="me-3"><i class="fas fa-clock"></i> {{ $recipie->cook_time }} min</p>
         <p class="me-3"><i class="fab fa-apple"></i> {{ $recipie->numOfIngredients() }} ingredienser</p>
         <p class="me-3">{{ $recipie->difficulty }}</p>
       </section>
-      <ul class="list-group list-group-horizontal tags">
+      <ul class="list-group list-group-horizontal mt-2 tags">
         @foreach ($recipie->recipieTags as $tag)
           <li class="list-group-item" style="background-color: {{ $tag->tag->color }}">{{ $tag->tag->name }}</li>
         @endforeach
@@ -23,11 +23,12 @@
         @foreach ($recipie->instruction as $instruction)
           <div class="instruction mb-3">
             <div class="d-inline-block">
-              <input type="checkbox" id="inst-{{ $instruction->id }}" name="inst-{{ $instruction->id }}">
+              <input class="align-middle me-1" type="checkbox" id="inst-{{ $instruction->id }}"
+                name="inst-{{ $instruction->id }}">
               <label for="inst-{{ $instruction->id }}" class="lh-sm fs-5 d-inline">{{ $instruction->text }}</label>
             </div>
             @if ($instruction->timer !== null)
-              <button class="ms-3 mt-2 d-block">Timer: {{ $instruction->timer }} min</button>
+              <button class="mt-2 d-block timer">Timer: {{ $instruction->timer }} min</button>
             @endif
           </div>
         @endforeach
