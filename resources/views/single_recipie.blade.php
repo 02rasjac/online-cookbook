@@ -28,7 +28,9 @@
               <label for="inst-{{ $instruction->id }}" class="lh-sm fs-5 d-inline">{{ $instruction->text }}</label>
             </div>
             @if ($instruction->timer !== null)
-              <button class="mt-2 d-block timer">Timer: {{ $instruction->timer }} min</button>
+              <button class="mt-2 p-1 ps-2 pe-2 d-block bg-primary text-white rounded-pill timer">
+                Timer: {{ $instruction->timer }} min
+              </button>
             @endif
           </div>
         @endforeach

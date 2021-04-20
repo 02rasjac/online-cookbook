@@ -12036,6 +12036,7 @@ footer .second-footer {
 }
 
 #recipie .instruction .timer {
+  border: none;
   margin-left: 2em;
 }
 
