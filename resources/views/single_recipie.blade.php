@@ -9,6 +9,11 @@
         <p class="me-3"><i class="fab fa-apple"></i> {{ $recipie->numOfIngredients() }} ingredienser</p>
         <p class="me-3">{{ $recipie->difficulty }}</p>
       </section>
+      <ul class="list-group list-group-horizontal tags">
+        @foreach ($recipie->recipieTags as $tag)
+          <li class="list-group-item" style="background-color: {{ $tag->tag->color }}">{{ $tag->tag->name }}</li>
+        @endforeach
+      </ul>
     </header>
 
     <section class="row">
@@ -22,18 +27,20 @@
               <label for="inst-{{ $instruction->id }}" class="lh-sm fs-5 d-inline">{{ $instruction->text }}</label>
             </div>
             @if ($instruction->timer !== null)
-                <button class="ms-3 mt-2 d-block">Timer: {{ $instruction->timer }} min</button>
+              <button class="ms-3 mt-2 d-block">Timer: {{ $instruction->timer }} min</button>
             @endif
           </div>
         @endforeach
       </section>
-  
+
       @if ($recipie->ingredientGroup)
         <aside class="col-md-4">
           @foreach ($recipie->ingredientGroup as $group)
             <section class="mb-4">
               <ul class="list-group ingredient-group">
-                <li class="list-group-item bg-primary text-center text-light group-title"><h3 class="fw-bold">{{ $group->title }}</h3></li>
+                <li class="list-group-item bg-primary text-center text-light group-title">
+                  <h3 class="fw-bold">{{ $group->title }}</h3>
+                </li>
                 @foreach ($group->groupIngredient as $item)
                   <li class="list-group-item border border-primary d-flex justify-content-between">
                     <p class="fw-bold">{{ $item->ingredient->ingredient_name }}</p>

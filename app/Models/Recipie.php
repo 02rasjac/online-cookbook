@@ -49,6 +49,13 @@ class Recipie extends Model
     /**
      * Get the instructions this recipie has
      */
+    public function recipieTags() {
+        return $this->hasMany(RecipieTag::class);
+    }
+
+    /**
+     * Get the instructions this recipie has
+     */
     public function instruction() {
         return $this->hasMany(Instruction::class);
     }
