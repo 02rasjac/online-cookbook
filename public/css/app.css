@@ -12039,6 +12039,28 @@ footer .second-footer {
   margin-left: 2em;
 }
 
+#recipie .portions {
+  opacity: 80%;
+}
+
+#recipie .portions #decrease-portions,
+#recipie .portions #increase-portions {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #a402cd;
+}
+
+#recipie .portions #decrease-portions:hover,
+#recipie .portions #increase-portions:hover {
+  opacity: 100%;
+  color: #670181;
+}
+
 #recipie .ingredient-group .group-title {
   border-radius: 20px 0 0 0;
 }

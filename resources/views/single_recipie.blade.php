@@ -36,6 +36,11 @@
 
       @if ($recipie->ingredientGroup)
         <aside class="col-md-4">
+          <p class="text-center mb-1 portions">
+            <button id="decrease-portions" title="Minska antalet portioner"><i class="fas fa-minus-circle"></i></button>
+            <span id="portions">{{ $recipie->portions }}</span> portioner
+            <button id="increase-portions" title="Öka antalet portioner"><i class="fas fa-plus-circle"></i></button>
+          </p>
           @foreach ($recipie->ingredientGroup as $group)
             <section class="mb-4">
               <ul class="list-group ingredient-group">
