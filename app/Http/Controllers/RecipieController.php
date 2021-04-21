@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 
 class RecipieController extends Controller
 {
-    public function index() {
-        $recipie = Recipie::find(1);
+    public function showRecipie(Request $request, $username, $recipie_id) {
+        $recipie = Recipie::find($recipie_id);
         return view('single_recipie', ['recipie' => $recipie]);
     }
 }

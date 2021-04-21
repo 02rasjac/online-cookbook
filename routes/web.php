@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/kokbok/test', [Controllers\RecipieController::class, 'index'])->name('recipie');
+Route::get('/kokbok/{username}/{recipie_id}', [Controllers\RecipieController::class, 'showRecipie'])->name('recipie');
 
 Route::name('upload.')->prefix('/upload')->group(function() {
     Route::post('/profile-pic', [Controllers\UserController::class, 'uploadProfileImage'])->name('profile-image');
