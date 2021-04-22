@@ -23,6 +23,10 @@ Auth::routes();
 
 Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/kokbok/skapa', [Controllers\RecipieController::class, 'createRecipie'])
+    ->name('create-recipie')
+    ->middleware('auth');
+
 Route::get('/kokbok/{username}/{recipie_id}', [Controllers\RecipieController::class, 'showRecipie'])->name('recipie');
 
 Route::name('upload.')->prefix('/upload')->group(function() {
