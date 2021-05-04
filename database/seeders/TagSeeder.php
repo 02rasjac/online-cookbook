@@ -15,15 +15,15 @@ class TagSeeder extends Seeder
     public function run()
     {
         DB::table('tags')->insert([
-            'name' => 'kött',
+            'tag_name' => 'kött',
             'color' => '#ff0000'
         ]);
         DB::table('tags')->insert([
-            'name' => 'gluten',
+            'tag_name' => 'gluten',
             'color' => '#ffff00'
         ]);
         DB::table('tags')->insert([
-            'name' => 'vegetariskt',
+            'tag_name' => 'vegetariskt',
             'color' => '#00ff00'
         ]);
     }

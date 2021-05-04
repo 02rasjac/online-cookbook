@@ -17,7 +17,7 @@ class RecipieSeeder extends Seeder
     {
         DB::table('recipies')->insert([
             'user_id' => 1,
-            'status' => Recipie::STATUS_PUBLISHED,
+            'status' => Recipie::STATUS_PUBLIC,
             'title' => 'first test recipie',
             'description' => 'Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit. Duis nec urna elit. Vivamus et felis.',
@@ -28,7 +28,7 @@ class RecipieSeeder extends Seeder
 
         DB::table('recipies')->insert([
             'user_id' => 1,
-            'status' => Recipie::STATUS_PUBLISHED,
+            'status' => Recipie::STATUS_PUBLIC,
             'title' => 'second test recipie',
             'description' => 'Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit. Duis nec urna elit. Vivamus et felis.',

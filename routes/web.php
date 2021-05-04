@@ -31,4 +31,5 @@ Route::get('/kokbok/{username}/{recipie_id}', [Controllers\RecipieController::cl
 
 Route::name('upload.')->prefix('/upload')->group(function() {
     Route::post('/profile-pic', [Controllers\UserController::class, 'uploadProfileImage'])->name('profile-image');
+    Route::post('/kokbok/skapa', [Controllers\RecipieController::class, 'uploadRecipie'])->name('recipie');
 });

@@ -17,7 +17,7 @@ class CreateRecipiesTable extends Migration
         Schema::create('recipies', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->enum('status', Recipie::STATUS_CHOICES)->default(Recipie::STATUS_PUBLISHED);
+            $table->enum('status', Recipie::STATUS_CHOICES)->default(Recipie::STATUS_PUBLIC);
             $table->string('thumbnail')->default(Recipie::DEFAULT_THUMBNAIL);
             $table->string('title');
             $table->text('description');
