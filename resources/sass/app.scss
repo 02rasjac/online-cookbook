@@ -11,7 +11,13 @@
 @import "helpers";
 
 main {
-    min-height: 85vh;
+    min-height: 95vh;
+}
+
+// Bug where the image doesn't exist in bootstrap...
+//TODO: Change the fill-color to $secondary (?)
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 //====================
@@ -139,7 +145,7 @@ main {
         position: absoulte;
         background-color: black;
         overflow: hidden;
-        height: calc(100vh - 70px);
+        height: 95vh;
 
         .hero-image {
             height: 100%;

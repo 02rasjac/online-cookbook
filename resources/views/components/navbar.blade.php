@@ -76,7 +76,7 @@
     <a href="{{ route('index') }}" class="navbar-brand">
       <img src="{{ Storage::url('images/large-logo-half-scale.png') }}" alt="Kokboken Online" class="d-inline-block">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+    <button class="navbar-toggler text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
