@@ -14,11 +14,11 @@
         <a href="#about" class="primary-btn">Läs Mer</a>
         <a href="{{ route('register') }}" class="secondary-btn">Skapa Konto</a>
       </section>
-      <div class="recipe">
+      <div class="d-inline-flex align-items-center p-2 recipe">
         <img src="{{ Storage::url('images/profile-images/local-profile-image.png') }}" alt="">
-        <div class="info">
+        <div class="d-flex flex-column ms-3 info">
           <p class="recipie-owner">Recept Ägare</p>
-          <p class="recipie-title">Recept Titel</p>
+          <p class="fs-6 recipie-title">Recept Titel</p>
         </div>
       </div>
 

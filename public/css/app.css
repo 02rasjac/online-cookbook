@@ -11997,30 +11997,16 @@ footer .second-footer {
 }
 
 #startpage .hero .recipe {
-  height: 3em;
-  padding: 0.5em;
-  display: flex;
   color: #f4f4f4;
   border: 2px solid #cda002;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.3);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin-top: 25vh;
 }
 
 #startpage .hero .recipe img {
   height: 3em;
   border-radius: 50%;
-}
-
-#startpage .hero .recipe .info {
-  margin-left: 1em;
-  line-height: 1.2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 #startpage .hero .recipe .info .recipie-owner {

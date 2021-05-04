@@ -235,14 +235,10 @@ footer {
         }
 
         .recipe {
-            height: 3em;
-            padding: 0.5em;
-            display: flex;
             color: $text-primary;
             border: 2px solid $secondary;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.3);
-            width: fit-content;
 
             margin-top: 25vh;
 
@@ -252,11 +248,11 @@ footer {
             }
 
             .info {
-                margin-left: 1em;
-                line-height: 1.2em;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                // margin-left: 1em;
+                // line-height: 1.2em;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
 
                 .recipie-owner {
                     font-size: 1.2em;
