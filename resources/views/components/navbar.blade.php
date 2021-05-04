@@ -71,8 +71,8 @@
     </div>
   </nav> --}}
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container justify-content-between">
     <a href="{{ route('index') }}" class="navbar-brand">
       <img src="{{ Storage::url('images/large-logo-half-scale.png') }}" alt="Kokboken Online" class="d-inline-block">
     </a>
@@ -80,23 +80,23 @@
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item ms-3">
           <a class="nav-link" href="#">Kokbok</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ms-3">
           <a class="nav-link" href="#">Planerare</a>
         </li>
         @guest
-          <li class="nav-item">
+          <li class="nav-item ms-3">
             <a class="nav-link" href="{{ route('login') }}">Logga In</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ms-3">
             <a class="nav-link" href="{{ route('register') }}">Registrera</a>
           </li>
         @else
-          <li class="nav-item dropdown">
+          <li class="nav-item ms-3 dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               <img src="{{ Storage::url(Auth::user()->profile_pic) }}" alt="Profilbild" class="profile-image" />
