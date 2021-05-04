@@ -11,7 +11,7 @@
       </section>
       <ul class="list-group list-group-horizontal mt-2 tags">
         @foreach ($recipie->recipieTags as $tag)
-          <li class="list-group-item" style="background-color: {{ $tag->tag->color }}">{{ $tag->tag->tag_name }}</li>
+          <li class="list-group-item rounded-pill tag" style="background-color: {{ $tag->tag->color }}">{{ $tag->tag->tag_name }}</li>
         @endforeach
       </ul>
     </header>

@@ -11985,13 +11985,6 @@ main {
   font-size: 1.2em;
 }
 
-#recipie .tags li {
-  font-size: 90%;
-  margin-right: 1em;
-  border-radius: 10px;
-  padding: 0.1em 0.5em;
-}
-
 #recipie .instruction input[type=checkbox] {
   width: 1.5em;
   height: 1.5em;
@@ -12064,6 +12057,13 @@ main {
 
 #recipie form input[type=number] {
   -moz-appearance: textfield;
+}
+
+.tag {
+  font-size: 90%;
+  margin-right: 1em;
+  border-radius: 10px;
+  padding: 0.1em 0.5em;
 }
 
 
