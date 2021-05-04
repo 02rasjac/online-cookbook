@@ -83,7 +83,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item ms-3">
-          <a class="nav-link" href="#">Kokbok</a>
+          <a class="nav-link" href="{{ route('my-cookbook') }}">Kokbok</a>
         </li>
         <li class="nav-item ms-3">
           <a class="nav-link" href="#">Planerare</a>
