@@ -1,6 +1,6 @@
-<footer class="wrapper">
-  <div class="container">
-    <div class="column">
+<footer class="bg-primary">
+  <div class="d-flex justify-content-between container text-white pt-3 pb-3">
+    <div class="text-start">
       <h3>Kontakta Oss</h3>
       <ul>
         <li>
@@ -8,7 +8,7 @@
         </li>
       </ul>
     </div>
-    <div class="column">
+    <div class="text-center">
       <h3>Länkar</h3>
       <ul>
         <li>
@@ -28,7 +28,7 @@
         </li>
       </ul>
     </div>
-    <div class="column">
+    <div class="text-end">
       <h3>Sociala Medier</h3>
       <ul>
         <li>
@@ -43,7 +43,7 @@
       </ul>
     </div>
   </div>
-  <div class="second-footer">
+  <div class="bg-dark text-center text-white-50 p-2">
     <p>&copy; Rasmus Jacklin 2021</p>
   </div>
 </footer>

@@ -72,46 +72,6 @@ main {
     }
 }
 
-//====================
-//------ FOOTER ------
-//====================
-
-footer {
-    &.wrapper {
-        background-color: $primary;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        .column:nth-of-type(2) {
-            text-align: center;
-        }
-
-        .column:last-of-type {
-            text-align: right;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: $text-primary;
-            text-transform: uppercase;
-        }
-    }
-
-    .second-footer {
-        text-align: center;
-        color: $text-primary;
-        font-size: 0.9em;
-        font-weight: 300;
-        background-color: darken($primary, 10%);
-        padding: 0.4em 0;
-    }
-}
-
 //=======================
 //------ AUTH-FORM ------
 //=======================
