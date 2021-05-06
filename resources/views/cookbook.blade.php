@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container" id="cookbook">
-  <h1>Din Kokbok</h1>
+  <h1 class="fw-bold text-center my-4">Min Kokbok</h1>
   {{-- The user has no recipies --}}
   @auth
     @if (count($recipies) > 0)

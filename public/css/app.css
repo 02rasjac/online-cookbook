@@ -12066,6 +12066,11 @@ main {
   padding: 0.1em 0.5em;
 }
 
+#cookbook h1,
+#cookbook .h1 {
+  color: #4f4f4f;
+}
+
 #cookbook .recipie-info {
   width: 30%;
   height: -webkit-fit-content;
