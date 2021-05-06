@@ -12068,16 +12068,40 @@ main {
 
 #cookbook .recipie-info {
   width: 30%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  padding-top: 10%;
+  padding-bottom: 3rem;
 }
 
 #cookbook .recipie-info .thumbnail {
-  height: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   overflow: hidden;
+  z-index: 0;
 }
 
 #cookbook .recipie-info .thumbnail img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#cookbook .recipie-info .card-body {
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+}
+
+#cookbook .recipie-info .card-body .cookbook-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
 }
 
 

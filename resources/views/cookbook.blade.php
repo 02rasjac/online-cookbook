@@ -24,8 +24,8 @@
                 <li class="list-group-item rounded-pill tag" style="background-color: {{ $tag->tag->color }}">{{ $tag->tag->tag_name }}</li>
               @endforeach
               </ul>
-              <p class="card-text">{{ $recipie->description }}</p>
-              <div class="d-flex justify-content-between align-items-end mt-4 fs-4">
+              <p class="card-text mt-3">{{ $recipie->description }}</p>
+              <div class="d-flex justify-content-between align-items-end fs-4 cookbook-links">
                 <a href="{{ route('edit-recipie', ['username' => Auth::user()->name, 'recipie_id' => $recipie->id]) }}">
                   <i class="fas fa-pencil-alt text-secondary" title="Redigera"></i>
                 </a>
