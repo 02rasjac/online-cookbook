@@ -31,6 +31,13 @@ Route::get('/kokbok/skapa', [Controllers\RecipieController::class, 'createRecipi
 
 Route::get('/kokbok/{username}/{recipie_id}', [Controllers\RecipieController::class, 'showRecipie'])->name('recipie');
 
+Route::get('/kokbok/{username}/{recipie_id}/edit', [Controllers\RecipieController::class, 'createRecipie'])
+    ->name('edit-recipie');
+
+Route::get('kokbok/favorit/{recipie_id}', [])
+    ->name('favorite')
+    ->middleware('auth');
+
 Route::name('upload.')->prefix('/upload')->group(function() {
     Route::post('/profile-pic', [Controllers\UserController::class, 'uploadProfileImage'])->name('profile-image');
     Route::post('/kokbok/skapa', [Controllers\RecipieController::class, 'uploadRecipie'])->name('recipie');

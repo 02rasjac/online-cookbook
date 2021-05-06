@@ -320,7 +320,15 @@ main {
 
 #cookbook {
     .recipie-info {
-        // width: 30%;
-        // margin-right: auto;
+        width: 30%;
+
+        .thumbnail {
+            height: 30%;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+            }
+        }
     }
 }

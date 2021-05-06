@@ -12066,4 +12066,18 @@ main {
   padding: 0.1em 0.5em;
 }
 
+#cookbook .recipie-info {
+  width: 30%;
+}
+
+#cookbook .recipie-info .thumbnail {
+  height: 30%;
+  overflow: hidden;
+}
+
+#cookbook .recipie-info .thumbnail img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 
