@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/kokbok', [Controllers\CookbookController::class, 'index'])->name('my-cookbook');
+Route::get('/kokbok', [Controllers\CookbookController::class, 'myCookbook'])->name('my-cookbook');
 
 Route::get('/kokbok/skapa', [Controllers\RecipieController::class, 'createRecipie'])
     ->name('create-recipie')

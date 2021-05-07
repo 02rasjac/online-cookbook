@@ -8,12 +8,23 @@ use Illuminate\Support\Facades\Auth;
 
 class CookbookController extends Controller
 {
-    public function index() {
+    public function myCookbook(Request $request) {
+        $search_term = $request->search;
         $recipies = null;
 
         if (Auth::user() !== null) {
-            $recipies = Auth::user()->recipies;
+            $recipies = Recipie::where([
+                ['title', '!=', Null],
+                [function($query) use($search_term) {
+                    if ($search_term !== null) {
+                        $query->orWhere('title', 'LIKE', '%' . $search_term . '%')->get();
+                    }
+                }]
+            ])  ->orderBy('id', 'desc')
+                ->paginate(12);
+    
+            $recipies->appends(['search' => $request->search]);
         }
-        return view('cookbook', ['recipies' => $recipies]);
+        return view('cookbook', ['recipies' => $recipies, 'search' => $search_term]);
     }
 }

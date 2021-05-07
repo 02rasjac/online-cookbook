@@ -2,9 +2,18 @@
 
 @section('content')
 <div class="container" id="cookbook">
-  <h1 class="fw-bold text-center my-4">Min Kokbok</h1>
-  {{-- The user has no recipies --}}
+  <header class="text-center my-4">
+    <h1 class="fw-bold">Min Kokbok</h1>
+    <form action="{{ route('my-cookbook') }}" method="GET">
+      @csrf
+      <div class="input-group my-4 mx-auto w-50">
+        <input name="search" type="text" class="form-control" placeholder="Sök" value="{{ $search }}" required>
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Sök</button>
+      </div>
+    </form>
+  </header>
   @auth
+    {{-- The user has recipies --}}
     @if (count($recipies) > 0)
       <section class="d-flex flex-wrap justify-content-between">
         @foreach ($recipies as $recipie)
@@ -38,6 +47,7 @@
           </article>
         @endforeach
       </section>
+      {{ $recipies->links() }}
     @else
       <p>Du har inga recept.</p>
     @endif
