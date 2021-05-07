@@ -12109,4 +12109,8 @@ main {
   padding: 1rem;
 }
 
+#cookbook .pagination {
+  justify-content: center;
+}
+
 

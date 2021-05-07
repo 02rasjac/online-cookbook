@@ -21,7 +21,7 @@
           <a href="{{ route('login') }}">Logga In</a>
         </li>
         <li>
-          <a href="route('cookbook')">Kokbok</a>
+          <a href="{{ route('my-cookbook') }}">Kokbok</a>
         </li>
         <li>
           <a href="route('planer')">Måltidsplanerare</a>
