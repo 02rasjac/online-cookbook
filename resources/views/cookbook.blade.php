@@ -15,7 +15,7 @@
   @auth
     {{-- The user has recipies --}}
     @if (count($recipies) > 0)
-      <section class="d-flex flex-wrap justify-content-between">
+      <section class="d-flex flex-wrap justify-content-around">
         @foreach ($recipies as $recipie)
           <article class="card mb-4 recipie-info">
             <div class="thumbnail">
