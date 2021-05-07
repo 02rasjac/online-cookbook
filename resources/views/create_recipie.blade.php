@@ -14,14 +14,19 @@
     <form action="{{ route('upload.recipie') }}" method="post">
       @csrf
       <header class="my-4">
-        <input type="text" name="title" class="text-capitalize fw-bold text-dark form-control form-control-lg" 
-                required
-                maxlength="255"
-                value="{{ old('title') }}">
+        <div class="form-floating mb-3">
+          <input type="text" name="title" id="title" 
+                  class="text-capitalize fw-bold text-dark form-control form-control-lg" 
+                  required
+                  maxlength="255"
+                  placeholder="Title"
+                  value="{{ old('title') }}">
+          <label for="title">Titel</label>
+        </div>
         <section class="d-flex mt-2 information">
           <div class="input-group input-group-sm me-2">
             <span class="input-group-text"><i class="fas fa-clock text-secondary"></i></span>
-            <select name="cooktime" class="form-select" required>
+            <select name="cooktime" class="form-select" id="cooktime" required>
               <option value="not-chosen" class="text-black-50">Tillagningstid</option>
               @foreach ($cooktimes as $time)
                 @if ($time % 5 == 0)
@@ -66,17 +71,26 @@
       <section class="row">
         <section class="col-sm-7">
           <!-- Description -->
-          <textarea name="description" class="form-control fw-bold text-body mb-5 fs-5" 
-                    required 
-                    maxlength="1023" 
-                    minlength="16">{{ old('description') }}</textarea>
-
+          <div class="form-floating">
+            <textarea name="description" class="form-control fw-bold text-body mb-5 fs-5" 
+            required 
+            maxlength="1023" 
+            minlength="16"
+            id="description"
+            placeholder="Beskrivning"
+            style="height: 10rem;">{{ old('description') }}</textarea>
+            <label for="description">Beskrivning</label>
+          </div>
           <div class="instruction mb-3">
             <!-- Instructions -->
-            <div class="d-flex">
+            <div class="d-flex form-floating">
               <textarea name="instruction" class="form-control lh-sm fs-5 d-inline me-3" 
+                        id="instruction"
+                        placeholder="Instruktion"
+                        style="height: 5rem;"
                         required>{{ old('instruction') }}</textarea>
-              <button class="reset-button fs-4" type="button" id="remove-instructoin">
+              <label for="instruction">Instruktion</label>
+              <button class="reset-button fs-4" type="button" id="remove-instruction">
                 <i class="fas fa-times-circle text-danger"></i>
               </button>
             </div>
@@ -111,19 +125,30 @@
           </div>
           <section class="mb-4">
             <ul class="list-group ingredient-group">
-              <li class="list-group-item bg-primary text-center text-light group-title">
-                <input name="groups[0][title]" type="text" class="form-control text-center fs-4 p-0" placeholder="Titel" required value="{{ old('groups.0.title') }}">
+              <li class="list-group-item bg-primary text-center fs-5 group-title">
+                <div class="form-floating">
+                  <input name="groups[0][title]" type="text" class="form-control" placeholder="Gruppens Titel" required id="group-title" value="{{ old('groups.0.title') }}">
+                  <label for="group-title">Gruppens Titel</label>
+                </div>
               </li>
               <li class="list-group-item border border-primary d-flex justify-content-between">
-                <input list="verified-ingredients" name="groups[0][ingredients][0][name]" class="form-control fw-bold" placeholder="Namn"
-                  required value="{{ old('groups.0.ingredient.name') }}">
+                <div class="form-floating">
+                  <input list="verified-ingredients" name="groups[0][ingredients][0][name]" 
+                        class="form-control fw-bold" 
+                        placeholder="Namn" required value="{{ old('groups.0.ingredient.name') }}"
+                        id="ingredient-name">
+                  <label for="ingredient-name">Namn</label>
+                </div>
                 <datalist id="verified-ingredients">
                   @foreach ($ingredients as $ingredient)
                     <option value="{{ $ingredient->ingredient_name }}">
                   @endforeach
                 </datalist>
-                <input type="number" name="groups[0][ingredients][0][quantity]" class="form-control" placeholder="Mängd" min="0" step="any" value="{{ old('groups.0.ingredient.quantity') }}">
-                <select name="groups[0][ingredients][0][measurement_id]" class="form-select">
+                <div class="form-floating">
+                  <input type="number" name="groups[0][ingredients][0][quantity]" class="form-control" placeholder="Mängd" min="0" step="any" value="{{ old('groups.0.ingredient.quantity') }}" id="ingredient-quantity">
+                <label for="ingredient-quantity">Mängd</label>
+                </div>
+                <select name="groups[0][ingredients][0][measurement_id]" class="form-select" id="ingredient-measurement">
                   <option value="not-chosen" class="text-black-50">Enhet</option>
                   @foreach ($units as $unit)
                     <option value="{{ $unit->id }}" @if (old('groups.0.ingredient.measurement_id') == $unit->id) selected @endif>
