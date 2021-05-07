@@ -68,8 +68,8 @@
         </select>
       </header>
 
-      <section class="row">
-        <section class="col-sm-7">
+      <section class="d-flex">
+        <section class="me-4 left-form">
           <!-- Description -->
           <div class="form-floating">
             <textarea name="description" class="form-control fw-bold text-body mb-5 fs-5" 
@@ -118,7 +118,7 @@
           </button>
         </section>
 
-        <aside class="col-md-5">
+        <aside class="right-form">
           <div class="input-group input-group-sm mb-2">
             <span class="input-group-text">Antal portioner:</span>
             <input name="portions" class="form-control" type="number" value="{{ old('portions') ? old('portions') : 4 }}" min="1" max="12">
@@ -132,7 +132,7 @@
                 </div>
               </li>
               <li class="list-group-item border border-primary d-flex justify-content-between">
-                <div class="form-floating">
+                <div class="form-floating input-ing-name">
                   <input list="verified-ingredients" name="groups[0][ingredients][0][name]" 
                         class="form-control fw-bold" 
                         placeholder="Namn" required value="{{ old('groups.0.ingredient.name') }}"
@@ -144,11 +144,11 @@
                     <option value="{{ $ingredient->ingredient_name }}">
                   @endforeach
                 </datalist>
-                <div class="form-floating">
+                <div class="form-floating input-ing-quantity">
                   <input type="number" name="groups[0][ingredients][0][quantity]" class="form-control" placeholder="Mängd" min="0" step="any" value="{{ old('groups.0.ingredient.quantity') }}" id="ingredient-quantity">
                 <label for="ingredient-quantity">Mängd</label>
                 </div>
-                <select name="groups[0][ingredients][0][measurement_id]" class="form-select" id="ingredient-measurement">
+                <select name="groups[0][ingredients][0][measurement_id]" class="form-select input-ing-unit" id="ingredient-measurement">
                   <option value="not-chosen" class="text-black-50">Enhet</option>
                   @foreach ($units as $unit)
                     <option value="{{ $unit->id }}" @if (old('groups.0.ingredient.measurement_id') == $unit->id) selected @endif>

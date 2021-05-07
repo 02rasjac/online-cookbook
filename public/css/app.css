@@ -12033,6 +12033,22 @@ main {
   max-width: 70%;
 }
 
+#recipie form .left-form {
+  min-width: 55%;
+}
+
+#recipie form .input-ing-name {
+  width: 50%;
+}
+
+#recipie form .input-ing-quantity {
+  width: 27%;
+}
+
+#recipie form .input-ing-unit {
+  width: 23%;
+}
+
 #recipie form .form-check {
   padding-left: 0;
 }
