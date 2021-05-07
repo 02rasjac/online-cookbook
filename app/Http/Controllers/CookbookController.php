@@ -15,6 +15,7 @@ class CookbookController extends Controller
         if (Auth::user() !== null) {
             $recipies = Recipie::where([
                 ['title', '!=', Null],
+                ['user_id', '=', Auth::user()->id],
                 [function($query) use($search_term) {
                     if ($search_term !== null) {
                         $query->orWhere('title', 'LIKE', '%' . $search_term . '%')->get();
