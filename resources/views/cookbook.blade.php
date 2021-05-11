@@ -4,12 +4,17 @@
 <div class="container" id="cookbook">
   <header class="text-center my-4">
     <h1 class="fw-bold">Min Kokbok</h1>
-    <form action="{{ route('my-cookbook') }}" method="GET">
-      <div class="input-group my-4 mx-auto w-50">
-        <input name="search" type="text" class="form-control" placeholder="Sök" value="{{ $search }}" required>
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Sök</button>
+    <div class="header-functions d-flex justify-content-center align-items-center my-4">
+      <form action="{{ route('my-cookbook') }}" method="GET" class="me-5">
+        <div class="input-group">
+          <input name="search" type="text" class="form-control" placeholder="Sök" value="{{ $search }}" required>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Sök</button>
+        </div>
+      </form>
+      <a href="{{ route('create-recipie') }}" class="link-create-recipie">
+        <i class="text-secondary me-1 fas fa-plus-circle"></i> Skapa Recept
+      </a>
       </div>
-    </form>
   </header>
   @auth
     {{-- The user has recipies --}}

@@ -339,6 +339,26 @@ main {
         color: #4f4f4f;
     }
 
+    .header-functions {
+        form {
+            width: 50%;
+        }
+
+        .link-create-recipie {
+            background-color: $primary;
+            border-radius: 15px;
+            padding: .5em;
+            font-weight: bold;
+            transition: .2s;
+
+            &:hover {
+                text-decoration: none;
+                box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.25) inset;
+                transition: .2s;
+            }
+        }
+    }
+
     .recipie-info {
         width: 30%;
         height: fit-content;
