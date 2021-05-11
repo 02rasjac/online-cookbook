@@ -346,6 +346,14 @@ main {
         padding-top: 10%;
         padding-bottom: 3rem;
 
+        transition: .2s;
+
+        &:hover {
+            box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.1);
+            transform: translateY(-.5em);
+            transition: .2s;
+        }
+
         //! Make link cover whole article, but doesn't work with the other links
         // .recipie-link span {
         //     color: inherit;

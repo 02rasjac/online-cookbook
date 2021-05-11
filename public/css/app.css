@@ -12095,6 +12095,13 @@ main {
   position: relative;
   padding-top: 10%;
   padding-bottom: 3rem;
+  transition: 0.2s;
+}
+
+#cookbook .recipie-info:hover {
+  box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5em);
+  transition: 0.2s;
 }
 
 #cookbook .recipie-info .recipie-link {
