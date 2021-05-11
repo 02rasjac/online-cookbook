@@ -20,7 +20,7 @@
                   required
                   maxlength="255"
                   placeholder="Title"
-                  value="{{ old('title') }}">
+                  value="{{ old('title') ?? $recipie->title }}">
           <label for="title">Titel</label>
         </div>
         <section class="d-flex mt-2 information">
@@ -31,11 +31,11 @@
               @foreach ($cooktimes as $time)
                 @if ($time % 5 == 0)
                   <option value="{{ $time }}"
-                      @if (old('cooktime') == $time) selected="selected" @endif
+                      @if ((old('cooktime') ?? $recipie->cook_time) == $time) selected="selected" @endif
                   >{{ $time }}</option>
                 @else
                   <option value="{{ $time }}" 
-                      @if (old('cooktime') == $time) selected="selected" @endif
+                      @if ((old('cooktime') ?? $recipie->cook_time) == $time) selected="selected" @endif
                   >&gt;{{ $time - 1 }}</option>
                 @endif
               @endforeach
@@ -51,9 +51,12 @@
             <span class="input-group-text text-secondary">*temp*</span>
             <select name="difficulty" class="form-select" required>
               <option value="not-chosen" class="text-black-50">Svårighetsgrad</option>
-              <option value="easy"   @if (old('difficulty') == 'easy') selected="selected" @endif>Enkelt</option>
-              <option value="medium" @if (old('difficulty') == 'medium') selected="selected" @endif>Medel</option>
-              <option value="hard"   @if (old('difficulty') == 'hard') selected="selected" @endif>Svårt</option>
+              <option value="easy" 
+                @if ((old('difficulty') ?? $recipie->difficulty) == 'easy') selected="selected" @endif>Enkelt</option>
+              <option value="medium" 
+                @if ((old('difficulty') ?? $recipie->difficulty) == 'medium') selected="selected" @endif>Medel</option>
+              <option value="hard" 
+                @if ((old('difficulty') ?? $recipie->difficulty) == 'hard') selected="selected" @endif>Svårt</option>
             </select>
           </div>
         </section>
@@ -61,9 +64,10 @@
         <select name="tag_id[]" multiple>
           @foreach ($tags as $tag)
             <option value="{{ $tag->id }}" 
-              @if (old('tag_id') && in_array($tag->id, old('tag_id'))) selected="selected" @endif>
-              {{ $tag->tag_name }}
-            </option>
+              {{-- THIS DOESN'T BRING IN THE TAGS THE RECIPIE ALREADY HAS!!! --}}
+              @if ((old('tag_id')) && 
+                  (in_array($tag->id, (old('tag_id'))))) selected="selected" @endif
+            >{{ $tag->tag_name }}</option>
           @endforeach
         </select>
       </header>
@@ -78,7 +82,7 @@
             minlength="16"
             id="description"
             placeholder="Beskrivning"
-            style="height: 10rem;">{{ old('description') }}</textarea>
+            style="height: 10rem;">{{ old('description') ?? $recipie->description }}</textarea>
             <label for="description">Beskrivning</label>
           </div>
           <div class="instruction mb-3">
@@ -88,14 +92,15 @@
                         id="instruction"
                         placeholder="Instruktion"
                         style="height: 5rem;"
-                        required>{{ old('instruction') }}</textarea>
+                        required>{{ old('instruction') ?? $recipie->instruction[0]->text }}</textarea>
               <label for="instruction">Instruktion</label>
               <button class="reset-button fs-4" type="button" id="remove-instruction">
                 <i class="fas fa-times-circle text-danger"></i>
               </button>
             </div>
             <button class="mt-3 p-1 ps-2 pe-2 d-block bg-primary text-white rounded-pill timer" type="button">
-              Timer: <input name="timer" type="text" placeholder="mm:ss" value="{{ old('timer') }}"> min
+              Timer: <input name="timer" type="text" placeholder="mm:ss" 
+                      value="{{ old('timer') ?? $recipie->instruction[0]->timer }}"> min
             </button>
           </div>
           <div class="instruction mb-3">
@@ -106,7 +111,7 @@
           <div class="form-check form-switch mt-5 fs-5">
             <label class="form-check-label" for="flexSwitchCheckDefault">Privat</label>
             {{-- If the user has set their recipies to public in the settings, it should default to public when creating a new recipie --}}
-            @if (Auth::user()->recipies_is_public || old('isPublic') == 'checked')
+            @if (Auth::user()->recipies_is_public || (old('isPublic') ?? $recipie->is_public) == 'checked')
               <input name="isPublic" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked value="1">
             @else
               <input name="isPublic" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value="0">
@@ -121,13 +126,14 @@
         <aside class="right-form">
           <div class="input-group input-group-sm mb-2">
             <span class="input-group-text">Antal portioner:</span>
-            <input name="portions" class="form-control" type="number" value="{{ old('portions') ? old('portions') : 4 }}" min="1" max="12">
+            <input name="portions" class="form-control" type="number" 
+                  value="{{ (old('portions') ?? $recipie->portions) ?? 4}}" min="1" max="12">
           </div>
           <section class="mb-4">
             <ul class="list-group ingredient-group">
               <li class="list-group-item bg-primary text-center fs-5 group-title">
                 <div class="form-floating">
-                  <input name="groups[0][title]" type="text" class="form-control" placeholder="Gruppens Titel" required id="group-title" value="{{ old('groups.0.title') }}">
+                  <input name="groups[0][title]" type="text" class="form-control" placeholder="Gruppens Titel" required id="group-title" value="{{ old('groups.0.title') ?? $recipie->ingredientGroup[0]->title }}">
                   <label for="group-title">Gruppens Titel</label>
                 </div>
               </li>
@@ -135,7 +141,9 @@
                 <div class="form-floating input-ing-name">
                   <input list="verified-ingredients" name="groups[0][ingredients][0][name]" 
                         class="form-control fw-bold" 
-                        placeholder="Namn" required value="{{ old('groups.0.ingredient.name') }}"
+                        placeholder="Namn" required 
+                        value="{{ old('groups.0.ingredient.name') ?? 
+                              $recipie->ingredientGroup[0]->groupIngredient[0]->ingredient->ingredient_name }}"
                         id="ingredient-name">
                   <label for="ingredient-name">Namn</label>
                 </div>
@@ -145,13 +153,21 @@
                   @endforeach
                 </datalist>
                 <div class="form-floating input-ing-quantity">
-                  <input type="number" name="groups[0][ingredients][0][quantity]" class="form-control" placeholder="Mängd" min="0" step="any" value="{{ old('groups.0.ingredient.quantity') }}" id="ingredient-quantity">
+                  <input type="number" name="groups[0][ingredients][0][quantity]" class="form-control" 
+                        placeholder="Mängd" min="0" step="any" 
+                        value="{{ old('groups.0.ingredient.quantity') ?? 
+                                $recipie->ingredientGroup[0]->groupIngredient[0]->quantity}}" 
+                        id="ingredient-quantity">
                 <label for="ingredient-quantity">Mängd</label>
                 </div>
                 <select name="groups[0][ingredients][0][measurement_id]" class="form-select input-ing-unit" id="ingredient-measurement">
                   <option value="not-chosen" class="text-black-50">Enhet</option>
                   @foreach ($units as $unit)
-                    <option value="{{ $unit->id }}" @if (old('groups.0.ingredient.measurement_id') == $unit->id) selected @endif>
+                    <option value="{{ $unit->id }}" 
+                            @if ((old('groups.0.ingredient.measurement_id') ?? 
+                                  $recipie->ingredientGroup[0]->groupIngredient[0]->measurement_unit_id) == $unit->id) 
+                                    selected 
+                            @endif>
                       {{ $unit->measurement_name }}</option>
                   @endforeach
                 </select>

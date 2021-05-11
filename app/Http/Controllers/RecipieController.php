@@ -21,11 +21,31 @@ class RecipieController extends Controller
         $units = MeasurementUnit::all();
         $ingredients = Ingredient::where('verified', true)->orderBy('ingredient_name')->get();
         $cooktimes = Recipie::COOKTIMES;
+        $recipie = new Recipie;
+
         return view('create_recipie', [
             'tags' => $tags,
             'units' => $units,
             'ingredients' => $ingredients,
             'cooktimes' => $cooktimes,
+            'recipie' => $recipie,
+        ]);
+    }
+
+    public function editRecipie(Request $request) {
+        $tags = Tag::all();
+        $units = MeasurementUnit::all();
+        $ingredients = Ingredient::where('verified', true)->orderBy('ingredient_name')->get();
+        $cooktimes = Recipie::COOKTIMES;
+
+        $recipie = Recipie::where('id', $request->recipie_id)->first();
+
+        return view('create_recipie', [
+            'tags'          => $tags,
+            'units'         => $units,
+            'ingredients'   => $ingredients,
+            'cooktimes'     => $cooktimes,
+            'recipie'       => $recipie,
         ]);
     }
 

@@ -31,7 +31,7 @@ Route::get('/kokbok/skapa', [Controllers\RecipieController::class, 'createRecipi
 
 Route::get('/kokbok/{username}/{recipie_id}', [Controllers\RecipieController::class, 'showRecipie'])->name('recipie');
 
-Route::get('/kokbok/{username}/{recipie_id}/edit', [Controllers\RecipieController::class, 'createRecipie'])
+Route::get('/kokbok/{username}/{recipie_id}/edit', [Controllers\RecipieController::class, 'editRecipie'])
     ->name('edit-recipie');
 
 Route::get('kokbok/favorit/{recipie_id}', [])
