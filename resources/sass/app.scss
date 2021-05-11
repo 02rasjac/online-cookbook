@@ -338,12 +338,34 @@ main {
     h1 {
         color: #4f4f4f;
     }
+
     .recipie-info {
         width: 30%;
         height: fit-content;
         position: relative;
         padding-top: 10%;
         padding-bottom: 3rem;
+
+        //! Make link cover whole article, but doesn't work with the other links
+        // .recipie-link span {
+        //     color: inherit;
+        //     text-decoration: none;
+        //     position: absolute; 
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     z-index: 2;
+        // }
+
+        .recipie-link {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                color: lighten($text-secondary, 20%);
+            }
+        }
 
         .thumbnail {
             position: absolute;
@@ -369,6 +391,7 @@ main {
                 left: 0;
                 width: 100%;
                 padding: 1rem;
+                z-index: 100;
             }
         }
     }

@@ -12097,6 +12097,15 @@ main {
   padding-bottom: 3rem;
 }
 
+#cookbook .recipie-info .recipie-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+#cookbook .recipie-info .recipie-link:hover {
+  color: #5e5e5e;
+}
+
 #cookbook .recipie-info .thumbnail {
   position: absolute;
   top: 0;
@@ -12123,6 +12132,7 @@ main {
   left: 0;
   width: 100%;
   padding: 1rem;
+  z-index: 100;
 }
 
 #cookbook .pagination {
