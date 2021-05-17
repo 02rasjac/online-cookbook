@@ -34,6 +34,13 @@
             @endif
           </div>
         @endforeach
+        @if (Auth::user()->id === $recipie->user->id)
+          <form action="{{ route('delete-recipie', $recipie->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Radera</button>
+          </form>
+        @endif
       </section>
 
       @if ($recipie->ingredientGroup)

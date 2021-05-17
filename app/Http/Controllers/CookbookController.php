@@ -16,6 +16,7 @@ class CookbookController extends Controller
             $recipies = Recipie::where([
                 ['title', '!=', Null],
                 ['user_id', '=', Auth::user()->id],
+                ['status', '!=', Recipie::STATUS_DELETED],
                 [function($query) use($search_term) {
                     if ($search_term !== null) {
                         $query->orWhere('title', 'LIKE', '%' . $search_term . '%')->get();

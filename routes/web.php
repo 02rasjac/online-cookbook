@@ -42,3 +42,5 @@ Route::name('upload.')->prefix('/upload')->group(function() {
     Route::post('/profile-pic', [Controllers\UserController::class, 'uploadProfileImage'])->name('profile-image');
     Route::post('/kokbok/skapa', [Controllers\RecipieController::class, 'uploadRecipie'])->name('recipie');
 });
+
+Route::delete('/delete/recipie/{recipie_id}', [Controllers\RecipieController::class, 'deleteRecipie'])->name('delete-recipie');

@@ -136,4 +136,18 @@ class RecipieController extends Controller
 
         abort(404);
     }
+
+    public function deleteRecipie(Request $request, $recipie_id) {
+        $recipie = Recipie::where('id', $recipie_id)->first();
+        $owner_id = $recipie->user->id;
+        // dd($owner_id);
+
+        if (Auth::user()->id === $owner_id && $recipie !== Null) {
+            $recipie->status = Recipie::STATUS_DELETED;
+            $recipie->save();
+            return redirect()->route('my-cookbook')->with(200);
+        }
+
+        return back();
+    }
 }
