@@ -13,6 +13,7 @@ use App\Models\RecipieTag;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RecipieController extends Controller
 {
@@ -52,6 +53,8 @@ class RecipieController extends Controller
     public function uploadRecipie(UploadRecipieRequest $request) {
         $validated = $request->validated();
         $recipie = new Recipie;
+
+        DB::beginTransaction();
 
         // Assign data to the model
         $recipie->user_id = Auth::user()->id;
@@ -114,6 +117,8 @@ class RecipieController extends Controller
                 }
             }
         }
+
+        DB::commit();
 
         return redirect()->route('recipie', ['username' => Auth::user()->name, 'recipie_id' => $recipie->id]);
     }
