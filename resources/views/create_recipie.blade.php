@@ -85,24 +85,15 @@
             style="height: 10rem;">{{ old('description') ?? $recipie->description }}</textarea>
             <label for="description">Beskrivning</label>
           </div>
-          <div class="instruction mb-3">
-            <!-- Instructions -->
-            <div class="d-flex form-floating">
-              <textarea name="instruction" class="form-control lh-sm fs-5 d-inline me-3" 
-                        id="instruction"
-                        placeholder="Instruktion"
-                        style="height: 5rem;"
-                        required>{{ old('instruction') ?? $recipie->instruction[0]->text }}</textarea>
-              <label for="instruction">Instruktion</label>
-              <button class="reset-button fs-4" type="button" id="remove-instruction">
-                <i class="fas fa-times-circle text-danger"></i>
-              </button>
-            </div>
-            <button class="mt-3 p-1 ps-2 pe-2 d-block bg-primary text-white rounded-pill timer" type="button">
-              Timer: <input name="timer" type="text" placeholder="mm:ss" 
-                      value="{{ old('timer') ?? $recipie->instruction[0]->timer }}"> min
-            </button>
-          </div>
+
+          {{-- Display instructions --}}
+          @if (!isset($recipie->instruction[0]))
+            @include('components.create_recipie.instruction')
+          @endif
+          @foreach ($recipie->instruction as $instruction) 
+            @include('components.create_recipie.instruction')
+          @endforeach
+
           <div class="instruction mb-3">
             <button class="reset-button fs-5 mt-3" type="button" id="add-instruction">
               <i class="fas fa-plus-circle me-1 text-primary"></i> Lägg till instruktion
@@ -129,51 +120,12 @@
             <input name="portions" class="form-control" type="number" 
                   value="{{ (old('portions') ?? $recipie->portions) ?? 4}}" min="1" max="12">
           </div>
-          <section class="mb-4">
-            <ul class="list-group ingredient-group">
-              <li class="list-group-item bg-primary text-center fs-5 group-title">
-                <div class="form-floating">
-                  <input name="groups[0][title]" type="text" class="form-control" placeholder="Gruppens Titel" required id="group-title" value="{{ old('groups.0.title') ?? $recipie->ingredientGroup[0]->title }}">
-                  <label for="group-title">Gruppens Titel</label>
-                </div>
-              </li>
-              <li class="list-group-item border border-primary d-flex justify-content-between">
-                <div class="form-floating input-ing-name">
-                  <input list="verified-ingredients" name="groups[0][ingredients][0][name]" 
-                        class="form-control fw-bold" 
-                        placeholder="Namn" required 
-                        value="{{ old('groups.0.ingredient.name') ?? 
-                              $recipie->ingredientGroup[0]->groupIngredient[0]->ingredient->ingredient_name }}"
-                        id="ingredient-name">
-                  <label for="ingredient-name">Namn</label>
-                </div>
-                <datalist id="verified-ingredients">
-                  @foreach ($ingredients as $ingredient)
-                    <option value="{{ $ingredient->ingredient_name }}">
-                  @endforeach
-                </datalist>
-                <div class="form-floating input-ing-quantity">
-                  <input type="number" name="groups[0][ingredients][0][quantity]" class="form-control" 
-                        placeholder="Mängd" min="0" step="any" 
-                        value="{{ old('groups.0.ingredient.quantity') ?? 
-                                $recipie->ingredientGroup[0]->groupIngredient[0]->quantity}}" 
-                        id="ingredient-quantity">
-                <label for="ingredient-quantity">Mängd</label>
-                </div>
-                <select name="groups[0][ingredients][0][measurement_id]" class="form-select input-ing-unit" id="ingredient-measurement">
-                  <option value="not-chosen" class="text-black-50">Enhet</option>
-                  @foreach ($units as $unit)
-                    <option value="{{ $unit->id }}" 
-                            @if ((old('groups.0.ingredient.measurement_id') ?? 
-                                  $recipie->ingredientGroup[0]->groupIngredient[0]->measurement_unit_id) == $unit->id) 
-                                    selected 
-                            @endif>
-                      {{ $unit->measurement_name }}</option>
-                  @endforeach
-                </select>
-              </li>
-            </ul>
-          </section>
+          @if (!isset($recipie->ingredientGroup[0]))
+            @include('components.create_recipie.group')
+          @endif
+          @foreach ($recipie->ingredientGroup as $group)
+            @include('components.create_recipie.group')
+          @endforeach
           <section class="mb-4 text-center align-bottom add-group">
             <button class="reset-button fs-5" type="button" id="add-group">
               <i class="fas fa-plus-circle me-1 text-primary"></i> Lägg till grupp
